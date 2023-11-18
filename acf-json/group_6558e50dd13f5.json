@@ -1,0 +1,52 @@
+{
+    "key": "group_6558e50dd13f5",
+    "title": "Seasonal Contact Form",
+    "fields": [
+        {
+            "key": "field_6558e50eb738b",
+            "label": "Contact Core",
+            "name": "contact_core",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 0,
+            "clone": [
+                "group_6558e463060ab"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "show_in_graphql": 1,
+    "graphql_field_name": "seasonalContactForm",
+    "map_graphql_types_from_location_rules": 0,
+    "graphql_types": "",
+    "modified": 1700324699
+}
