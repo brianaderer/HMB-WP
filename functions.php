@@ -21,3 +21,6 @@ foreach ( $dirs as $dir ):
 			require_once( $file[0] );
 		endif;
 	endforeach;
+
+
+//Pencils Down. No more Edits to the Functions file. Make an Include.
