@@ -14,13 +14,24 @@ function return_files( $path ): array {
 }
 
 $path =  trailingslashit( get_stylesheet_directory() ) . 'includes/*' ;
-$dirs = return_dirs( $path );
-foreach ( $dirs as $dir ):
-		$file = array_filter( return_files( $path . '/*' ), 'is_file' );
-		if(  $file[0] ):
-			require_once( $file[0] );
-		endif;
-	endforeach;
+$admin_path =  trailingslashit( get_stylesheet_directory() ) . 'admin_includes/*' ;
+function enqueue_includes( string $path ):void{
+	$dirs = return_dirs( $path );
+	foreach ( $dirs as $dir ):
+			$files = array_filter( return_files( $path . '/*' ), 'is_file' );
+			if(  $files ):
+				foreach( $files as $file ):
+					if( $file ):
+						logger($file);
+						require_once( $file );
+					endif;
+				endforeach;
+			endif;
+		endforeach;
+}
 
-
+enqueue_includes( $path );
+if( is_admin() ):
+	enqueue_includes( $admin_path );
+endif;
 //Pencils Down. No more Edits to the Functions file. Make an Include.
