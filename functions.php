@@ -22,7 +22,6 @@ function enqueue_includes( string $path ):void{
 			if(  $files ):
 				foreach( $files as $file ):
 					if( $file ):
-						logger($file);
 						require_once( $file );
 					endif;
 				endforeach;
