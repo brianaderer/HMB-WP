@@ -19,18 +19,18 @@
             "show_in_graphql": 1,
             "layout": "row",
             "pagination": 1,
-            "rows_per_page": 20,
+            "rows_per_page": 10,
             "min": 0,
             "max": 0,
             "collapsed": "field_65591acf2ea2b",
             "button_label": "Add Attraction",
             "sub_fields": [
                 {
-                    "key": "field_65591acf2ea2b",
-                    "label": "Title",
-                    "name": "title",
+                    "key": "field_6559364a7d549",
+                    "label": "Attractions",
+                    "name": "attractions",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "clone",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -40,175 +40,13 @@
                         "id": ""
                     },
                     "show_in_graphql": 1,
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65591db0e1e18"
-                },
-                {
-                    "key": "field_655918c22ea24",
-                    "label": "Location",
-                    "name": "location",
-                    "aria-label": "",
-                    "type": "google_map",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_graphql": 1,
-                    "center_lat": "41.1973179",
-                    "center_lng": "-73.8885881",
-                    "zoom": "",
-                    "height": "",
-                    "parent_repeater": "field_65591db0e1e18"
-                },
-                {
-                    "key": "field_6559191f2ea25",
-                    "label": "Category",
-                    "name": "category",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_graphql": 1,
-                    "choices": {
-                        "Transportation": "Transportation",
-                        "Food and Drink": "Food and Drink",
-                        "Natural Features and Hikes": "Natural Features and Hikes",
-                        "Day Trip Destinations": "Day Trip Destinations",
-                        "Personal Care \/ Medical": "Personal Care \/ Medical"
-                    },
-                    "default_value": [],
-                    "return_format": "value",
-                    "multiple": 1,
-                    "allow_null": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": "",
-                    "parent_repeater": "field_65591db0e1e18"
-                },
-                {
-                    "key": "field_65591a872ea29",
-                    "label": "Description",
-                    "name": "description",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_graphql": 1,
-                    "default_value": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "",
-                    "parent_repeater": "field_65591db0e1e18"
-                },
-                {
-                    "key": "field_65591a072ea26",
-                    "label": "Telephone",
-                    "name": "telephone",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_graphql": 1,
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65591db0e1e18"
-                },
-                {
-                    "key": "field_65591a4b2ea27",
-                    "label": "Website",
-                    "name": "website",
-                    "aria-label": "",
-                    "type": "url",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_graphql": 1,
-                    "default_value": "",
-                    "placeholder": "",
-                    "parent_repeater": "field_65591db0e1e18"
-                },
-                {
-                    "key": "field_65591a602ea28",
-                    "label": "Tags",
-                    "name": "tags",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_graphql": 1,
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65591db0e1e18"
-                },
-                {
-                    "key": "field_65591a962ea2a",
-                    "label": "Photo",
-                    "name": "photo",
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_graphql": 1,
-                    "return_format": "url",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
-                    "preview_size": "medium",
+                    "clone": [
+                        "group_655935fae7f8b"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0,
                     "parent_repeater": "field_65591db0e1e18"
                 }
             ]
@@ -236,5 +74,5 @@
     "graphql_field_name": "attractions",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1700339213
+    "modified": 1700345456
 }

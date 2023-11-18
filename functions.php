@@ -6,6 +6,11 @@ function logger( mixed $input ): void {
 
 //now include all the rest of our code
 
+require_once( 'vendor/autoload.php' );
+
+$dotenv = Dotenv\Dotenv::createImmutable( __DIR__ );
+$dotenv->load();
+
 function return_dirs( $path ): array {
 	return glob( $path, GLOB_ONLYDIR );
 }

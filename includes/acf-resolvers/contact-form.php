@@ -5,15 +5,19 @@ function resolve_acf_group_fields():array {
 	$result = [];
 			foreach ( $fields as $field ) {
 				$choices = null;
+				$placeholder = null;
 				if( array_key_exists( 'choices', $field ) ):
 					$choices = $field['choices'];
+				endif;
+				if( array_key_exists( 'placeholder', $field ) ):
+					$placeholder = $field['placeholder'];
 				endif;
 			$result[ $field['name'] ] = array(
 				'label' => $field['label'],
 				'value' => $field['value'],
 				'options' => $choices,
 				'type'  => $field['type'],
-				'placeholder' => $field['placeholder'],
+				'placeholder' => $placeholder,
 			);
 		}
 return $result;
