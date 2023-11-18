@@ -112,9 +112,9 @@
     "location": [
         [
             {
-                "param": "post_status",
+                "param": "block",
                 "operator": "==",
-                "value": "publish"
+                "value": "all"
             }
         ]
     ],
@@ -124,12 +124,12 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
     "show_in_graphql": 0,
     "graphql_field_name": "contactForm",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1700324445
+    "modified": 1700326493
 }

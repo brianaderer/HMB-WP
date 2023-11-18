@@ -3,7 +3,7 @@
     "title": "Transient Contact Form",
     "fields": [
         {
-            "key": "field_6558e5791df0e",
+            "key": "field_6558ecf0c8d02",
             "label": "Core 1",
             "name": "core_1",
             "aria-label": "",
@@ -16,6 +16,7 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_graphql": 0,
             "clone": [
                 "field_6558e1bc42119",
                 "field_6558e3124211a",
@@ -96,5 +97,5 @@
     "graphql_field_name": "transientContactForm",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1700325265
+    "modified": 1700326681
 }
