@@ -1,6 +1,5 @@
 <?php
 function resolve_acf_group_fields():array {
-	logger('called');
 	$field_group_key = "group_6558e578f3a2b"; // Replace with your field group key
 	$fields = acf_get_fields( $field_group_key );
 	$result = [];
