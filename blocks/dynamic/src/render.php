@@ -19,17 +19,17 @@ $args = array(
 //@TODO this query could be optimized
 $query = new WP_Query( $args );
 $groups = acf_get_field_groups( array( 'post_type' => $args['post_type'] ) );
-if( is_graphql_http_request() ):
-	$array = [];
-			if( $query -> have_posts() ):
-			while( $query -> have_posts() ):
-					$query -> the_post();
-					$post = $query -> post;
-					$array[] = json_encode( get_fields( $post -> ID ) );
-				endwhile;
-				esc_html_e( json_encode( $array ) , 'dynamic' );
-			endif;
-elseif( is_user_logged_in() && ( is_rest_api_request() || is_admin_request() ) ):
+//if( is_graphql_http_request() ):
+//	$array = [];
+//			if( $query -> have_posts() ):
+//			while( $query -> have_posts() ):
+//					$query -> the_post();
+//					$post = $query -> post;
+//					$array[] = json_encode( get_fields( $post -> ID ) );
+//				endwhile;
+//				esc_html_e( json_encode( $array ) , 'dynamic' );
+//			endif;
+//elseif( true ):
 	?>
 	<p <?php echo get_block_wrapper_attributes(); ?>>
 		<?php
@@ -57,7 +57,7 @@ elseif( is_user_logged_in() && ( is_rest_api_request() || is_admin_request() ) )
 				?>
 			<?php
 			endwhile;
-		endif;
+		//endif;
 		?>
 	</p>
 	<?php
