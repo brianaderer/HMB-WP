@@ -15,8 +15,6 @@ export default function Edit({ attributes, setAttributes }) {
 		setAttributes({ additionalData: value });
 	};
 
-	console.log(content);
-
 	// Initialize additionalData on mount
 	useEffect(() => {
 		if (attributes.additionalData === '') {

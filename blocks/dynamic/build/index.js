@@ -46,7 +46,6 @@ function Edit({
       additionalData: value
     });
   };
-  console.log(content);
 
   // Initialize additionalData on mount
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
