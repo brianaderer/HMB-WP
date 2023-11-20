@@ -29,8 +29,7 @@ if( is_graphql_http_request() ):
 				endwhile;
 				esc_html_e( json_encode( $array ) , 'dynamic' );
 			endif;
-endif;
-if( is_user_logged_in() ):
+elseif( is_user_logged_in() && ( is_rest_api_request() || is_admin_request() ) ):
 	?>
 	<p <?php echo get_block_wrapper_attributes(); ?>>
 		<?php
