@@ -30,7 +30,7 @@ if( is_graphql_http_request() ):
 				esc_html_e( json_encode( $array ) , 'dynamic' );
 			endif;
 endif;
-if( is_rest_api_request() && is_user_logged_in() ):
+if( is_user_logged_in() ):
 	?>
 	<p <?php echo get_block_wrapper_attributes(); ?>>
 		<?php
