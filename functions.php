@@ -8,7 +8,6 @@ function logger( mixed $input ): void {
 
 //composer files. theme isn't working? try running composer install?
 require_once( 'vendor/autoload.php' );
-require_once( 'test/test.php' );
 
 $dotenv = Dotenv\Dotenv::createImmutable( __DIR__ );
 $dotenv->load();
