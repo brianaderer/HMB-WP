@@ -7,8 +7,6 @@ if (!isset($block)) {
 // You can use $block['id'] to add unique attributes to the block's HTML markup.
 $block_id = $block['id'];
 
-logger(($block['data']['_attractions_repeater']));
-
 // Fetch ACF fields related to this block. Replace 'field_name' with your actual field names.
 $example_field = get_field('field_name') ?: 'Default value';
 
