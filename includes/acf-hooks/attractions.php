@@ -10,6 +10,7 @@ function attractions_block(): void {
 			'name'              => 'Attractions',
 			'title'             => __('Attractions'),
 			'description'       => __('Manage attractions list.'),
+			'render_template'   => get_stylesheet_directory() . '/includes/acf-hooks/attractions-block-template.php',
 			'category'          => 'formatting',
 			'icon'              => 'admin-comments',
 			'keywords'          => array( 'places'),

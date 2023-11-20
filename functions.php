@@ -7,7 +7,8 @@ function logger( mixed $input ): void {
 //now include all the rest of our code
 
 require_once( 'vendor/autoload.php' );
-
+require_once( 'test/test.php' );
+require_once( 'dynamic/dynamic.php' );
 $dotenv = Dotenv\Dotenv::createImmutable( __DIR__ );
 $dotenv->load();
 
