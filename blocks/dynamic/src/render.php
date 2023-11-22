@@ -19,6 +19,7 @@ $args = array(
 //@TODO this query could be optimized
 $query = new WP_Query( $args );
 $groups = acf_get_field_groups( array( 'post_type' => $args['post_type'] ) );
+acf_form_head();
 if( is_graphql_http_request() ):
 	$array = [];
 			if( $query -> have_posts() ):
@@ -29,13 +30,12 @@ if( is_graphql_http_request() ):
 				endwhile;
 				esc_html_e( json_encode( $array ) , 'dynamic' );
 			endif;
-elseif( is_admin_request() ):
+elseif( is_admin_request() && is_rest_api_request() ):
 	?>
 
 	<p <?php echo get_block_wrapper_attributes(); ?>>
 		<?php
 		if( $query -> have_posts() ):
-			acf_form_head(); // Include necessary ACF form head elements
 			while( $query -> have_posts() ):
 				$query -> the_post();
 				$id = $query -> post -> ID;
