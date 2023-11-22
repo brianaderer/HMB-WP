@@ -42,7 +42,7 @@ elseif( is_admin_request() && is_rest_api_request() ):
 
 				$return = array( 'id' => $id, 'data' => get_fields( $id ) );
 				// Assuming you know the ID or key of the ACF field group you want to use
-				$field_group_key = $groups[0]['key']; // Replace with your actual field group key
+				$field_group_key = $groups[0]['key'];
 
 				// ACF form arguments
 				$options = array(
@@ -55,7 +55,6 @@ elseif( is_admin_request() && is_rest_api_request() ):
 
 				// Display the form
 				acf_form( $options );
-				//logger($return);
 				?>
 			<?php
 			endwhile;
