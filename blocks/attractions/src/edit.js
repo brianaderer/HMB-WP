@@ -26,7 +26,7 @@ export default function Edit({ attributes, setAttributes }) {
 	useEffect(() => {
 		if (attributes.additionalData !== '') {
 			apiFetch({
-				path: '/wp/v2/block-renderer/create-block/dynamic',
+				path: '/wp/v2/block-renderer/create-block/attractions',
 				method: 'POST',
 				data: {
 					context: 'edit',
