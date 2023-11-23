@@ -60,7 +60,7 @@ function Edit({
   (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
     if (attributes.additionalData !== '') {
       _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_4___default()({
-        path: '/wp/v2/block-renderer/create-block/dynamic',
+        path: '/wp/v2/block-renderer/create-block/attractions',
         method: 'POST',
         data: {
           context: 'edit',
