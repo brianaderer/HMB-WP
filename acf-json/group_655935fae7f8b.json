@@ -3,27 +3,6 @@
     "title": "Attractions Core",
     "fields": [
         {
-            "key": "field_65591acf2ea2b",
-            "label": "Title",
-            "name": "title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "show_in_graphql": 1,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_655918c22ea24",
             "label": "Location",
             "name": "location",
@@ -78,7 +57,7 @@
             "label": "Description",
             "name": "description",
             "aria-label": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -89,10 +68,10 @@
             },
             "show_in_graphql": 1,
             "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_65591a072ea26",
@@ -138,7 +117,7 @@
             "label": "Tags",
             "name": "tags",
             "aria-label": "",
-            "type": "text",
+            "type": "taxonomy",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -148,11 +127,16 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "taxonomy": "placetype",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "field_type": "multi_select",
+            "allow_null": 1,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
         },
         {
             "key": "field_65591a962ea2a",
@@ -195,7 +179,9 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "categories"
+    ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
@@ -203,5 +189,5 @@
     "graphql_field_name": "attractionsCore",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1700345863
+    "modified": 1700758363
 }

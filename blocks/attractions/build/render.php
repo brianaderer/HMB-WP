@@ -41,6 +41,7 @@ elseif( is_admin_request() && is_rest_api_request() ):
 				$id = $query -> post -> ID;
 
 				$return = array( 'id' => $id, 'data' => get_fields( $id ) );
+				logger( $return );
 				// Assuming you know the ID or key of the ACF field group you want to use
 				$field_group_key = $groups[0]['key'];
 
