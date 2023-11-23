@@ -3,6 +3,35 @@
     "title": "Attractions Core",
     "fields": [
         {
+            "key": "field_655f87528a078",
+            "label": "Show Title",
+            "name": "show_title",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "Controls whether the Attraction is listed under it's Google Maps name or the Title that you set.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "choices": {
+                "false": "Google Map",
+                "true": "Your Title"
+            },
+            "default_value": [
+                "false"
+            ],
+            "return_format": "array",
+            "allow_custom": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
             "key": "field_655918c22ea24",
             "label": "Location",
             "name": "location",
@@ -189,5 +218,5 @@
     "graphql_field_name": "attractionsCore",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1700758363
+    "modified": 1700759538
 }

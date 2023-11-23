@@ -26,7 +26,7 @@ if( is_graphql_http_request() ):
 			while( $query -> have_posts() ):
 					$query -> the_post();
 					$post = $query -> post;
-					$array[] = json_encode( get_fields( $post -> ID ) );
+					$array[] = json_encode( array( 'acf' => get_fields( $post -> ID ), 'title' => $post -> post_title ) );
 				endwhile;
 				esc_html_e( json_encode( $array ) , 'dynamic' );
 			endif;
