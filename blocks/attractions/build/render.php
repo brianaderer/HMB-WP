@@ -19,6 +19,7 @@ $args = array(
 //@TODO this query could be optimized
 $query = new WP_Query( $args );
 $groups = acf_get_field_groups( array( 'post_type' => $args['post_type'] ) );
+acf_form_head();
 if( is_graphql_http_request() ):
 	$array = [];
 			if( $query -> have_posts() ):
@@ -27,10 +28,11 @@ if( is_graphql_http_request() ):
 					$post = $query -> post;
 					$array[] = json_encode( get_fields( $post -> ID ) );
 				endwhile;
-				esc_html_e( json_encode( $array ) , 'attractions' );
+				esc_html_e( json_encode( $array ) , 'dynamic' );
 			endif;
-elseif( is_user_logged_in() && ( is_rest_api_request() || is_admin_request() ) ):
+elseif( is_admin_request() && is_rest_api_request() ):
 	?>
+
 	<p <?php echo get_block_wrapper_attributes(); ?>>
 		<?php
 		if( $query -> have_posts() ):
@@ -40,20 +42,20 @@ elseif( is_user_logged_in() && ( is_rest_api_request() || is_admin_request() ) )
 
 				$return = array( 'id' => $id, 'data' => get_fields( $id ) );
 				// Assuming you know the ID or key of the ACF field group you want to use
-				$field_group_key = $groups[0]['key']; // Replace with your actual field group key
+				$field_group_key = $groups[0]['key'];
 
 				// ACF form arguments
 				$options = array(
+					'post_title' => true,
 					'post_id' => $id, // Use the current post ID
 					'field_groups' => array( $field_group_key ), // Replace with your actual field group key
 					'return' => '', // URL to redirect to on form submission
-					'submit_value' => 'Update' // Text for the submit button
+					'submit_value' => 'Update', // Text for the submit button
+					'uploader' => 'wp'
 				);
 
 				// Display the form
-				acf_form_head(); // Include necessary ACF form head elements
 				acf_form( $options );
-				//logger($return);
 				?>
 			<?php
 			endwhile;

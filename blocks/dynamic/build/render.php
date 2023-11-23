@@ -46,6 +46,7 @@ elseif( is_admin_request() && is_rest_api_request() ):
 
 				// ACF form arguments
 				$options = array(
+					'post_title' => true,
 					'post_id' => $id, // Use the current post ID
 					'field_groups' => array( $field_group_key ), // Replace with your actual field group key
 					'return' => '', // URL to redirect to on form submission
