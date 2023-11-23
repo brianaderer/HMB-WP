@@ -27,11 +27,13 @@ if( is_graphql_http_request() ):
 					$query -> the_post();
 					$post = $query -> post;
 					$return_array = get_fields( $post -> ID );
-					logger( $return_array );
 					$return_array[ 'title' ] = $post -> post_title;
-					$array[] = json_encode( $return_array );
+					logger( $array );
+					$array[] =  $return_array;
+					$json = htmlspecialchars_decode( json_encode( $array ) );
+					logger( $json );
 				endwhile;
-				esc_html_e( json_encode( $array ) , 'dynamic' );
+				echo( $json );
 			endif;
 elseif( is_admin_request() && is_rest_api_request() ):
 	?>
