@@ -52,11 +52,11 @@
             "height": ""
         },
         {
-            "key": "field_6559191f2ea25",
+            "key": "field_6561f9a275350",
             "label": "Category",
-            "name": "category",
+            "name": "category_tax",
             "aria-label": "",
-            "type": "select",
+            "type": "taxonomy",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -66,20 +66,16 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "choices": {
-                "Transportation": "Transportation",
-                "Food and Drink": "Food and Drink",
-                "Natural Features and Hikes": "Natural Features and Hikes",
-                "Day Trip Destinations": "Day Trip Destinations",
-                "Personal Care \/ Medical": "Personal Care \/ Medical"
-            },
-            "default_value": [],
-            "return_format": "value",
-            "multiple": 1,
+            "taxonomy": "place-category",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "field_type": "multi_select",
             "allow_null": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
         },
         {
             "key": "field_65591a872ea29",
@@ -192,32 +188,6 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium"
-        },
-        {
-            "key": "field_6561f9a275350",
-            "label": "Category",
-            "name": "category_tax",
-            "aria-label": "",
-            "type": "taxonomy",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "show_in_graphql": 1,
-            "taxonomy": "place-category",
-            "add_term": 1,
-            "save_terms": 1,
-            "load_terms": 1,
-            "return_format": "object",
-            "field_type": "multi_select",
-            "allow_null": 0,
-            "bidirectional": 0,
-            "multiple": 0,
-            "bidirectional_target": []
         }
     ],
     "location": [
@@ -244,5 +214,5 @@
     "graphql_field_name": "attractionsCore",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1700919794
+    "modified": 1700924339
 }
