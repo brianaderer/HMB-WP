@@ -28,7 +28,6 @@ if( is_graphql_http_request() ):
 					$post = $query -> post;
 					$return_array = get_fields( $post -> ID );
 					$return_array[ 'title' ] = $post -> post_title;
-					logger( $return_array['category_tax'] );
 					$array[] =  $return_array;
 					$json = htmlspecialchars_decode( json_encode( $array ) );
 				endwhile;
