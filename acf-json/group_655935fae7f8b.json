@@ -192,6 +192,32 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium"
+        },
+        {
+            "key": "field_6561f9a275350",
+            "label": "Category",
+            "name": "category_tax",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "taxonomy": "place-category",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "object",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -218,5 +244,5 @@
     "graphql_field_name": "attractionsCore",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1700759538
+    "modified": 1700919794
 }

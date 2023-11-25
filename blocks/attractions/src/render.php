@@ -12,7 +12,7 @@
 $args = array(
 	'post_type' => 'attractions',
 	'post_status' => 'publish',
-	'posts_per_page' => 8,
+	'posts_per_page' => -1,
 	'orderby' => 'date',
 	'order' => 'ASC',
 );
@@ -28,10 +28,9 @@ if( is_graphql_http_request() ):
 					$post = $query -> post;
 					$return_array = get_fields( $post -> ID );
 					$return_array[ 'title' ] = $post -> post_title;
-					logger( $array );
+					logger( $return_array['category_tax'] );
 					$array[] =  $return_array;
 					$json = htmlspecialchars_decode( json_encode( $array ) );
-					logger( $json );
 				endwhile;
 				echo( $json );
 			endif;
