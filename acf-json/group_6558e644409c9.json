@@ -24,8 +24,29 @@
             "append": ""
         },
         {
+            "key": "field_6563db4f90ac1",
+            "label": "Year, Make, Model",
+            "name": "year_make_model",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6558e675d2b93",
-            "label": "Boat Type",
+            "label": "Hull Plan",
             "name": "boat_type",
             "aria-label": "",
             "type": "select",
@@ -39,8 +60,21 @@
             },
             "show_in_graphql": 1,
             "choices": {
-                "Power": "Power",
-                "Sail": "Sail"
+                "Trawler": "Trawler",
+                "Sail": "Sail",
+                "Cutter": "Cutter",
+                "Sloop": "Sloop",
+                "Schooner": "Schooner",
+                "Yawl": "Yawl",
+                "Flybridge Yacht": "Flybridge Yacht",
+                "Cabin Cruiser": "Cabin Cruiser",
+                "Houseboat": "Houseboat",
+                "Runabout": "Runabout",
+                "Fishing": "Fishing",
+                "Catamaran": "Catamaran",
+                "Trimaran": "Trimaran",
+                "Center Console": "Center Console",
+                "Dinghy": "Dinghy"
             },
             "default_value": false,
             "return_format": "label",
@@ -142,5 +176,5 @@
     "graphql_field_name": "boatInfoCore",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1700331770
+    "modified": 1701047092
 }

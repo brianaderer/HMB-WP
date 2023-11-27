@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_6558e1bc42119",
-            "label": "First Name",
-            "name": "first_name",
+            "label": "Full Name",
+            "name": "full_name",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -16,28 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "show_in_graphql": 1,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6558e3124211a",
-            "label": "Last Name",
-            "name": "last_name",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "show_in_graphql": 1,
+            "show_in_graphql": 0,
             "default_value": "",
             "maxlength": "",
             "placeholder": "",
@@ -131,5 +110,5 @@
     "graphql_field_name": "contactForm",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1700326493
+    "modified": 1701026051
 }
