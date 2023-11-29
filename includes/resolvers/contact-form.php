@@ -27,7 +27,7 @@ add_action( 'graphql_register_types', function() {
 	try{
 	register_graphql_field( 'AcfTransientContactForm', 'contactData', [
 		'type' => 'String',
-		'description' => __( 'Expose ACF Generated Contact Form in the GQL Schema', 'replace-with-your-textdomain' ),
+		'description' => __( 'Expose ACF Generated Contact Form in the GQL Schema', 'halfmoonbay' ),
 		'resolve' => function( $root, $args, $context, $info ) {
 			return json_encode( resolve_acf_group_fields() );
 		}
