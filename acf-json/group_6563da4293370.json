@@ -59,6 +59,18 @@
                 "operator": "==",
                 "value": "acf\/guest-book-entry"
             }
+        ],
+        [
+            {
+                "param": "comment",
+                "operator": "==",
+                "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "guest_book"
+            }
         ]
     ],
     "menu_order": 0,
@@ -74,5 +86,5 @@
     "graphql_field_name": "guestBookEntry",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1701305301
+    "modified": 1701348497
 }
