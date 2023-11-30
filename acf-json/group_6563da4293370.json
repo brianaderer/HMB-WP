@@ -55,9 +55,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "post"
+                "value": "acf\/guest-book-entry"
             }
         ]
     ],
@@ -70,9 +70,9 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "show_in_graphql": 0,
+    "show_in_graphql": 1,
     "graphql_field_name": "guestBookEntry",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1701043004
+    "modified": 1701305301
 }

@@ -1,6 +1,6 @@
 <?php
-function resolve_acf_group_fields():array {
-	$field_group_key = "group_6558e578f3a2b"; // Replace with your field group key
+function resolve_acf_group_fields( string $field_group_key ):array {
+
 	$fields = acf_get_fields( $field_group_key );
 	$result = [];
 			foreach ( $fields as $field ) {
@@ -23,13 +23,26 @@ function resolve_acf_group_fields():array {
 return $result;
 }
 add_action( 'graphql_register_types', function() {
-	$result = resolve_acf_group_fields();
+	try{
+		register_graphql_field( 'AcfGuestBookEntry', 'guestBookData', [
+			'type' => 'String',
+			'description' => __( 'Expose ACF Generated Guest Book Form in the GQL Schema', 'halfmoonbay' ),
+			'resolve' => function( $root, $args, $context, $info ) {
+				$field_group_key = "group_6563da4293370"; // Replace with your field group key
+				return json_encode( resolve_acf_group_fields( $field_group_key ) );
+			}
+		] );
+	}
+	catch (Exception $e){
+		logger( $e );
+	}
 	try{
 	register_graphql_field( 'AcfTransientContactForm', 'contactData', [
 		'type' => 'String',
 		'description' => __( 'Expose ACF Generated Contact Form in the GQL Schema', 'halfmoonbay' ),
 		'resolve' => function( $root, $args, $context, $info ) {
-			return json_encode( resolve_acf_group_fields() );
+			$field_group_key = "group_6558e578f3a2b"; // Replace with your field group key
+			return json_encode( resolve_acf_group_fields( $field_group_key ) );
 		}
 	] );
 	}
