@@ -1,6 +1,6 @@
 <?php
-add_action('acf/init', 'guest_book_block');
-function guest_book_block(): void {
+add_action('acf/init', 'register_custom_blocks');
+function register_custom_blocks(): void {
 
 	// Check function exists.
 	if( function_exists('acf_register_block_type') ) {

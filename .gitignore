@@ -2,4 +2,6 @@
 .env
 vendor
 vendor/*
-blocks/*/node_modules
+blocks/*/node_modules/
+blocks/*/node_modules/*
+node_modules
