@@ -4,6 +4,7 @@ function resolve_acf_group_fields( string $field_group_key ):array {
 	$fields = acf_get_fields( $field_group_key );
 	$result = [];
 			foreach ( $fields as $field ) {
+				logger($field);
 				$choices = null;
 				$placeholder = null;
 				if( array_key_exists( 'choices', $field ) ):
@@ -12,12 +13,22 @@ function resolve_acf_group_fields( string $field_group_key ):array {
 				if( array_key_exists( 'placeholder', $field ) ):
 					$placeholder = $field['placeholder'];
 				endif;
+				if( array_key_exists( 'required', $field ) ):
+					$required = $field['required'];
+				endif;
+				if( array_key_exists( 'front-end', $field ) ):
+					$front_end = $field['front-end'];
+				else:
+					$front_end = 1;
+				endif;
 			$result[ $field['name'] ] = array(
 				'label' => $field['label'],
 				'value' => $field['value'],
 				'options' => $choices,
 				'type'  => $field['type'],
 				'placeholder' => $placeholder,
+				'display' => $front_end,
+				'required' => $required,
 			);
 		}
 return $result;

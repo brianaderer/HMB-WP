@@ -3,6 +3,78 @@
     "title": "Guest Book Entry",
     "fields": [
         {
+            "key": "field_656b4df48a070",
+            "label": "Contact Info",
+            "name": "contact_info",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "clone": [
+                "group_6558e1bb7368d"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_656b4e318a072",
+            "label": "Approved",
+            "name": "approved",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "front-end": 0,
+            "show_in_graphql": 1,
+            "choices": {
+                "true": "Approved",
+                "false": "Rejected"
+            },
+            "default_value": "null",
+            "return_format": "value",
+            "allow_null": 1,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_656b4e1a8a071",
+            "label": "Reply",
+            "name": "reply",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "front-end": 0,
+            "show_in_graphql": 1,
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_6563dace5685e",
             "label": "Boat Info",
             "name": "boat_info",
@@ -16,14 +88,15 @@
                 "class": "",
                 "id": ""
             },
-            "show_in_graphql": 1,
             "clone": [
                 "group_6558e644409c9"
             ],
             "display": "seamless",
             "layout": "block",
             "prefix_label": 0,
-            "prefix_name": 0
+            "prefix_name": 0,
+            "readonly": 1,
+            "disabled": 0
         },
         {
             "key": "field_6563db1b65397",
@@ -62,9 +135,9 @@
         ],
         [
             {
-                "param": "comment",
+                "param": "post_type",
                 "operator": "==",
-                "value": "page"
+                "value": "guest-book-entry"
             }
         ]
     ],
@@ -81,5 +154,5 @@
     "graphql_field_name": "guestBookEntry",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1701350787
+    "modified": 1701534372
 }

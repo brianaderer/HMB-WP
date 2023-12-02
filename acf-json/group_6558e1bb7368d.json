@@ -21,7 +21,8 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "disabled": 1
         },
         {
             "key": "field_6558e3254211b",
@@ -41,7 +42,8 @@
             "default_value": "",
             "placeholder": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "disabled": 1
         },
         {
             "key": "field_6558e3464211c",
@@ -64,7 +66,8 @@
             "placeholder": "",
             "step": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "disabled": 1
         },
         {
             "key": "field_6558e3bb4211d",
@@ -85,7 +88,8 @@
             "maxlength": "",
             "rows": "",
             "placeholder": "",
-            "new_lines": ""
+            "new_lines": "",
+            "disabled": 1
         }
     ],
     "location": [
@@ -110,5 +114,5 @@
     "graphql_field_name": "contactForm",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1701026051
+    "modified": 1701531527
 }
