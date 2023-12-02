@@ -2,3 +2,4 @@
 .env
 vendor
 vendor/*
+blocks/*/node_modules
