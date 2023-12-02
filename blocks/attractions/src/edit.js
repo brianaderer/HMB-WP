@@ -44,7 +44,7 @@ export default function Edit({ attributes, setAttributes }) {
 			<div {...useBlockProps()}>
 					<TextControl
 						label="Additional Data"
-						value={additionalData}
+						value={attributes.additionalData}
 						onChange={(value) => updateAdditionalData(value)}
 					/>
 				<div dangerouslySetInnerHTML={{ __html: content }} />

@@ -47,14 +47,14 @@ add_action( 'graphql_register_types', function() {
 		logger( $e );
 	}
 	try{
-	register_graphql_field( 'AcfTransientContactForm', 'contactData', [
-		'type' => 'String',
-		'description' => __( 'Expose ACF Generated Contact Form in the GQL Schema', 'halfmoonbay' ),
-		'resolve' => function( $root, $args, $context, $info ) {
-			$field_group_key = "group_6558e578f3a2b"; // Replace with your field group key
-			return json_encode( resolve_acf_group_fields( $field_group_key ) );
-		}
-	] );
+		register_graphql_field( 'AcfTransientContactForm', 'contactData', [
+			'type' => 'String',
+			'description' => __( 'Expose ACF Generated Contact Form in the GQL Schema', 'halfmoonbay' ),
+			'resolve' => function( $root, $args, $context, $info ) {
+				$field_group_key = "group_6558e578f3a2b"; // Replace with your field group key
+				return json_encode( resolve_acf_group_fields( $field_group_key ) );
+			}
+		] );
 	}
 	catch (Exception $e){
 		logger( $e );

@@ -1,13 +1,46 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/edit.js":
 /*!*********************!*\
   !*** ./src/edit.js ***!
   \*********************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\src\\edit.js: Identifier 'useBlockProps' has already been declared. (20:9)\n\n\u001b[0m \u001b[90m 18 |\u001b[39m \u001b[90m * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 19 |\u001b[39m \u001b[90m */\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m \u001b[36mimport\u001b[39m { useBlockProps } \u001b[36mfrom\u001b[39m \u001b[32m'@wordpress/block-editor'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 21 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 22 |\u001b[39m \u001b[90m/**\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 23 |\u001b[39m \u001b[90m * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.\u001b[39m\u001b[0m\n    at constructor (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:356:19)\n    at JSXParserMixin.raise (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:3223:19)\n    at ScopeHandler.checkRedeclarationInScope (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:1496:19)\n    at ScopeHandler.declareName (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:1467:12)\n    at JSXParserMixin.declareNameFromIdentifier (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:7484:16)\n    at JSXParserMixin.checkIdentifier (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:7480:12)\n    at JSXParserMixin.checkLVal (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:7419:12)\n    at JSXParserMixin.finishImportSpecifier (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:14175:10)\n    at JSXParserMixin.parseImportSpecifier (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:14352:17)\n    at JSXParserMixin.parseNamedImportSpecifiers (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:14330:36)\n    at JSXParserMixin.parseImportSpecifiersAndAfter (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:14152:37)\n    at JSXParserMixin.parseImport (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:14145:17)\n    at JSXParserMixin.parseStatementContent (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:12710:27)\n    at JSXParserMixin.parseStatementLike (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:12588:17)\n    at JSXParserMixin.parseModuleItem (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:12565:17)\n    at JSXParserMixin.parseBlockOrModuleBlockBody (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:13189:36)\n    at JSXParserMixin.parseBlockBody (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:13182:10)\n    at JSXParserMixin.parseProgram (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:12464:10)\n    at JSXParserMixin.parseTopLevel (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:12454:25)\n    at JSXParserMixin.parse (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:14376:10)\n    at parse (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\parser\\lib\\index.js:14417:38)\n    at parser (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\core\\lib\\parser\\index.js:41:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:64:37)\n    at normalizeFile.next (<anonymous>)\n    at run (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\core\\lib\\transformation\\index.js:21:50)\n    at run.next (<anonymous>)\n    at transform (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\@babel\\core\\lib\\transform.js:22:33)\n    at transform.next (<anonymous>)\n    at step (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\gensync\\index.js:261:32)\n    at C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\gensync\\index.js:273:13\n    at async.call.result.err.err (C:\\Users\\ennig\\Flywheel\\hmblcl\\app\\public\\wp-content\\themes\\HMB\\blocks\\instagram-gallery\\node_modules\\gensync\\index.js:223:11)");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+function Edit({
+  attributes,
+  setAttributes
+}) {
+  // Function to update the additionalData
+  const updateAdditionalData = value => {
+    setAttributes({
+      additionalData: value
+    });
+  };
+  console.log(attributes);
+  return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)()
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.TextControl, {
+    label: "Add the Instagram API key here",
+    value: attributes.additionalData || '' // Directly use attributes for value
+    ,
+    onChange: updateAdditionalData // Simplified to use the function directly
+  })));
+}
 
 /***/ }),
 
@@ -17,7 +50,6 @@ throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
@@ -55,7 +87,14 @@ __webpack_require__.r(__webpack_exports__);
   /**
    * @see ./edit.js
    */
-  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"]
+  edit: _edit__WEBPACK_IMPORTED_MODULE_2__["default"],
+  attributes: {
+    additionalData: {
+      type: 'string',
+      default: ''
+    }
+    // ... other attributes
+  }
 });
 
 /***/ }),
@@ -66,10 +105,29 @@ __webpack_require__.r(__webpack_exports__);
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "React" ***!
+  \************************/
+/***/ ((module) => {
+
+module.exports = window["React"];
+
+/***/ }),
+
+/***/ "@wordpress/block-editor":
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["blockEditor"];
 
 /***/ }),
 
@@ -79,8 +137,17 @@ __webpack_require__.r(__webpack_exports__);
   \********************************/
 /***/ ((module) => {
 
-"use strict";
 module.exports = window["wp"]["blocks"];
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["components"];
 
 /***/ }),
 
@@ -90,8 +157,7 @@ module.exports = window["wp"]["blocks"];
   \************************/
 /***/ ((module) => {
 
-"use strict";
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/instagram-gallery","version":"0.1.0","title":"Instagram Gallery","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"instagram-gallery","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","viewScript":"file:./view.js"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/instagram-gallery","version":"0.1.0","title":"Instagram Gallery","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false},"textdomain":"instagram-gallery","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php","attributes":{"additionalData":{"type":"array","default":[]}},"viewScript":"file:./view.js"}');
 
 /***/ })
 

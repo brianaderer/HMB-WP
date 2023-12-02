@@ -30,4 +30,11 @@ registerBlockType( metadata.name, {
 	 * @see ./edit.js
 	 */
 	edit: Edit,
+	attributes: {
+		additionalData: {
+			type: 'string',
+			default: ''
+		},
+		// ... other attributes
+	},
 } );
