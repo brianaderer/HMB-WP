@@ -18,8 +18,12 @@ add_action('graphql_register_types', function() {
 			'description' => 'Year, make, and model of the boat',
 		],
 		'beam' => [
-			'type' => 'String',
+			'type' => 'Float',
 			'description' => 'Beam width of the boat',
+		],
+		'boat_length_loa' => [
+			'type' => 'Float',
+			'description' => 'Length of the Boat',
 		],
 		// Include any additional fields from your ACF field group as needed
 	];
@@ -53,24 +57,31 @@ add_action('graphql_register_types', function() {
 		],
 		'outputFields' => [
 			'success' => [
-				'type' => 'Boolean',
+				'type' => 'Int',
 				'description' => 'Whether the comment was created successfully',
 			],
-			'comment' => [
-				'type' => 'Comment',
-				'description' => 'The created comment',
-			],
+//			'comment' => [
+//				'type' => 'Comment',
+//				'description' => 'The created comment',
+//			],
 			// Include any other necessary output fields
 		],
 		'mutateAndGetPayload' => function($input, $context, $info) {
 			// Logic to create a comment and save guest book entry data
 			// Use $input['content'], $input['commentOn'], $input['guestBookEntry'], etc.
-            logger($input);
 
+            $page = $input['commentOn'];
+			$args = array(
+				'comment_post_ID' => $page,
+				'comment_type' => 'Guest Book Entry',
+				'comment_approved' => 0,
+				'comment_content' => $input['content'],
+				'comment_meta' => $input['guestBookEntry'],
+			);
+			$success = wp_insert_comment( $args );
 			// Return the results (success status, created comment, etc.)
 			return [
-				'success' => true, // or false in case of failure
-				'comment' => 'foo', // the comment object you created
+				'success' => $success, // or false in case of failure
 			];
 		}
 	]);
