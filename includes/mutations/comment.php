@@ -25,7 +25,23 @@ add_action('graphql_register_types', function() {
 			'type' => 'Float',
 			'description' => 'Length of the Boat',
 		],
-		// Include any additional fields from your ACF field group as needed
+		'full_name' => [
+			'type' => 'String',
+			'description' => 'Full name of submitter'
+		],
+		'email' => [
+			'type' => 'String',
+			'description' => 'Email of submitter',
+		],
+		'phone_number' => [
+			'type' => 'String',
+			'description' => 'Phone number of submitter',
+		],
+		'message' => [
+			'type' => 'String',
+			'description' => 'The entry itself',
+		],
+ 		// Include any additional fields from your ACF field group as needed
 	];
 	// Define the 'GuestBookEntry' object type that corresponds to the ACF field group
 	register_graphql_object_type('GuestBookEntry', [
@@ -41,14 +57,6 @@ add_action('graphql_register_types', function() {
 	// Define the mutation for creating a comment with a guest book entry
 	register_graphql_mutation('createGuestBookEntry', [
 		'inputFields' => [
-			'content' => [
-				'type' => 'String',
-				'description' => 'Content of the comment',
-			],
-			'commentOn' => [
-				'type' => 'Int',
-				'description' => 'ID of the post to comment on',
-			],
 			'guestBookEntry' => [
 				'type' => 'GuestBookEntryInput',
 				'description' => 'Guest book entry data',
@@ -69,10 +77,8 @@ add_action('graphql_register_types', function() {
 			// Logic to create a comment and save guest book entry data
 			// Use $input['content'], $input['commentOn'], $input['guestBookEntry'], etc.
 			$args = array(
-				'comment_type' => 'Guest Book Entry',
 				'post_type' => 'guest-book-entry',
 				'post_status' => 'pending',
-				'post_content' => $input['content'],
 				'meta_input' => $input['guestBookEntry'],
 			);
 			$success = wp_insert_post( $args );

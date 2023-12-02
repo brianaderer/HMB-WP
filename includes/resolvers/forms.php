@@ -4,7 +4,6 @@ function resolve_acf_group_fields( string $field_group_key ):array {
 	$fields = acf_get_fields( $field_group_key );
 	$result = [];
 			foreach ( $fields as $field ) {
-				logger($field);
 				$choices = null;
 				$placeholder = null;
 				if( array_key_exists( 'choices', $field ) ):
