@@ -3,15 +3,13 @@
  * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
  */
 $key = $attributes['additionalData'];
-$json = file_get_contents( 'https://graph.instagram.com/me/media?fields=id,caption&access_token=' . $key );
+$json = file_get_contents( 'https://graph.instagram.com/me/media?fields=id,media_type,media_url,username,timestamp,caption&access_token=' . $key );
 $data = json_decode( $json );
-$posts = $data -> data;
-if ( $posts ):
-	foreach ( $posts as $post ):
-		logger( $post );
-	endforeach;
+if ( $data ):
+	$posts = $data -> data;
+	else:
+	$posts = [];
 endif;
+$array['posts'] = $posts;
 ?>
-<p <?php echo get_block_wrapper_attributes(); ?>>
-	<?php esc_html_e( json_encode( $data -> data ) ); ?>
-</p>
+<?php echo json_encode( $array ); ?>
