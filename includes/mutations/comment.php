@@ -41,7 +41,10 @@ add_action('graphql_register_types', function() {
 			'type' => 'String',
 			'description' => 'The entry itself',
 		],
- 		// Include any additional fields from your ACF field group as needed
+		'boat_image' => [
+			'type' => ['list_of' => 'Int'],
+			'description' => 'The images to associate with the Guest Book Entry',
+		],
 	];
 	// Define the 'GuestBookEntry' object type that corresponds to the ACF field group
 	register_graphql_object_type('GuestBookEntry', [
@@ -76,6 +79,7 @@ add_action('graphql_register_types', function() {
 		'mutateAndGetPayload' => function($input, $context, $info) {
 			// Logic to create a comment and save guest book entry data
 			// Use $input['content'], $input['commentOn'], $input['guestBookEntry'], etc.
+
 			$args = array(
 				'post_type' => 'guest-book-entry',
 				'post_status' => 'pending',
