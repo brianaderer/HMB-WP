@@ -4,7 +4,7 @@
  */
 ?>
 <?php
-logger( $attributes );
+//logger( $attributes );
 /**
  * Setup query to show the ‘attractions’ post type with ‘8’ posts.
  */

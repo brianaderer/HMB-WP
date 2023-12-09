@@ -24,28 +24,6 @@
             "append": ""
         },
         {
-            "key": "field_65747b44415d9",
-            "label": "Review Title",
-            "name": "review_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "front-end": 1,
-            "show_in_graphql": 1,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_655806503bf82",
             "label": "Review",
             "name": "review",
@@ -112,7 +90,7 @@
             "label": "Source",
             "name": "source",
             "aria-label": "",
-            "type": "text",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -123,18 +101,25 @@
             },
             "front-end": 1,
             "show_in_graphql": 1,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "choices": {
+                "waterway": "Waterway Guide",
+                "mdc": "Marinas.com",
+                "google": "Google"
+            },
+            "default_value": "null",
+            "return_format": "array",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         },
         {
-            "key": "field_65747b2512ac8",
-            "label": "Review URL",
-            "name": "review_url",
+            "key": "field_65748a0e52307",
+            "label": "Review Images",
+            "name": "review_images",
             "aria-label": "",
-            "type": "url",
+            "type": "gallery",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -145,16 +130,54 @@
             },
             "front-end": 1,
             "show_in_graphql": 1,
-            "default_value": "",
-            "placeholder": ""
+            "return_format": "array",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "insert": "append",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_65748a367a18c",
+            "label": "Boat Info",
+            "name": "boat_info",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "front-end": 1,
+            "show_in_graphql": 1,
+            "clone": [
+                "field_6558e644d2b92",
+                "field_6558e6aad2b94",
+                "field_6558e6d7d2b96",
+                "field_6558e675d2b93"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf\/reviews"
+                "value": "review"
             }
         ]
     ],
@@ -171,5 +194,5 @@
     "graphql_field_name": "reviews",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1702132568
+    "modified": 1702138533
 }
