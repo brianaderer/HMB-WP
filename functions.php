@@ -32,7 +32,7 @@ foreach( $blocks_dirs as $blocks_dir ):
 	endforeach;
 
 $path =  trailingslashit( get_stylesheet_directory() ) . 'includes/*' ;
-$admin_path =  trailingslashit( get_stylesheet_directory() ) . 'admin_includes/*' ;
+$admin_path =  trailingslashit( get_stylesheet_directory() ) . 'admin-includes/*' ;
 function enqueue_includes( string $path ):void{
 	$dirs = return_dirs( $path );
 	foreach ( $dirs as $dir ):
