@@ -1,5 +1,5 @@
 <?php
-add_action('graphql_register_types', function() {
+add_action( 'graphql_register_types', function() {
 	$boat_type_fields = [
 		'boat_name' => [
 			'type' => 'String',
@@ -58,8 +58,15 @@ add_action('graphql_register_types', function() {
 		'fields' => $boat_type_fields,
 	]);
 	// Define the mutation for creating a comment with a guest book entry
+	/**
+	 * @throws Exception
+	 */
 	register_graphql_mutation('createGuestBookEntry', [
 		'inputFields' => [
+			'title' => [
+				'type' => 'String',
+				'description' => 'The title for the post',
+			],
 			'guestBookEntry' => [
 				'type' => 'GuestBookEntryInput',
 				'description' => 'Guest book entry data',
@@ -71,10 +78,6 @@ add_action('graphql_register_types', function() {
 				'type' => 'Int',
 				'description' => 'Whether the comment was created successfully',
 			],
-//			'comment' => [
-//				'type' => 'Comment',
-//				'description' => 'The created comment',
-//			],
 		],
 		'mutateAndGetPayload' => function($input, $context, $info) {
 			// Logic to create a comment and save guest book entry data
@@ -82,6 +85,7 @@ add_action('graphql_register_types', function() {
 
 			$args = array(
 				'post_type' => 'guest-book-entry',
+				'post_title' => $input['title'],
 				'post_status' => 'pending',
 				'meta_input' => $input['guestBookEntry'],
 			);
