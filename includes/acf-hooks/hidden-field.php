@@ -20,7 +20,7 @@ foreach ( $fields as $field ):
 endforeach;
 
 add_action('acf/render_field_settings', 'add_readonly_and_disabled_to_text_field');
-function add_readonly_and_disabled_to_text_field( $field ) {
+function add_readonly_and_disabled_to_text_field( $field ): void {
 	acf_render_field_setting( $field, array(
 		'label'      => __('Show on Front End?','acf'),
 		'instructions'  => 'Resolver must be set up to honor this.',
