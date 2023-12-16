@@ -2,6 +2,7 @@
 function add_title_to_review( array $data, array $postarr, array $unsanitized_postarr, bool $update ):array {
 	if( $postarr['post_type'] == 'review' ):
 		$fields = get_fields($postarr['ID']);
+		logger($fields);
 		$title = $fields['reviewers_name'] . ' - ' . $fields['source']['label'] . ' - ' . $fields['date'];
 		$data['post_title'] = $title;
 		logger( $data['post_date'] );
