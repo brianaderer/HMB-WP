@@ -15,7 +15,7 @@ function attractions_posts_columns( $columns ) {
 
 // Add the data to the custom columns for the book post type:
 add_action( 'manage_attractions_posts_custom_column' , 'custom_attractions_column', 10, 2 );
-function custom_attractions_column( $column, $post_id ) {
+function custom_attractions_column( $column, $post_id ): void {
 	$tags = get_field( 'tags', $post_id );
 	$return = [];
 	/** @var $tag WP_Term */

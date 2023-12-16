@@ -1,11 +1,11 @@
 {
-    "key": "group_6558e578f3a2b",
-    "title": "Transient Contact Form",
+    "key": "group_657dbb71113f3",
+    "title": "Register User",
     "fields": [
         {
-            "key": "field_6558ecf0c8d02",
-            "label": "Core 1",
-            "name": "core_1",
+            "key": "field_657dbc3e55f4d",
+            "label": "User Info",
+            "name": "user_info",
             "aria-label": "",
             "type": "clone",
             "instructions": "",
@@ -16,10 +16,10 @@
                 "class": "",
                 "id": ""
             },
-            "show_in_graphql": 0,
+            "front-end": 1,
+            "show_in_graphql": 1,
             "clone": [
                 "field_6558e1bc42119",
-                "field_6558e3124211a",
                 "field_6558e3254211b",
                 "field_6558e3464211c"
             ],
@@ -29,7 +29,7 @@
             "prefix_name": 0
         },
         {
-            "key": "field_6558e6fce6d72",
+            "key": "field_657dbc8155f4e",
             "label": "Boat Info",
             "name": "boat_info",
             "aria-label": "",
@@ -42,32 +42,10 @@
                 "class": "",
                 "id": ""
             },
+            "front-end": 1,
             "show_in_graphql": 1,
             "clone": [
                 "group_6558e644409c9"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
-            "key": "field_6558e727e6d73",
-            "label": "Core 2",
-            "name": "core_2",
-            "aria-label": "",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "show_in_graphql": 1,
-            "clone": [
-                "field_6558e3bb4211d"
             ],
             "display": "seamless",
             "layout": "block",
@@ -94,8 +72,8 @@
     "description": "",
     "show_in_rest": 0,
     "show_in_graphql": 1,
-    "graphql_field_name": "transientContactForm",
+    "graphql_field_name": "registerUser",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1702740143
+    "modified": 1702741180
 }
