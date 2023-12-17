@@ -3,32 +3,6 @@
     "title": "Register User",
     "fields": [
         {
-            "key": "field_657dbc3e55f4d",
-            "label": "User Info",
-            "name": "user_info",
-            "aria-label": "",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "front-end": 1,
-            "show_in_graphql": 1,
-            "clone": [
-                "field_6558e1bc42119",
-                "field_6558e3254211b",
-                "field_6558e3464211c"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
             "key": "field_657dbc8155f4e",
             "label": "Boat Info",
             "name": "boat_info",
@@ -74,5 +48,5 @@
     "graphql_field_name": "registerUser",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1702807686
+    "modified": 1702832784
 }
