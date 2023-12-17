@@ -50,28 +50,6 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
-        },
-        {
-            "key": "field_657dc88d2ca44",
-            "label": "In Modal",
-            "name": "in_modal",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "front-end": 0,
-            "show_in_graphql": 1,
-            "message": "Render the form in a modal if true",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
         }
     ],
     "location": [
@@ -96,5 +74,5 @@
     "graphql_field_name": "registerUser",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1702742211
+    "modified": 1702807686
 }

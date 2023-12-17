@@ -72,4 +72,17 @@ add_action( 'graphql_register_types', function() {
 	catch (Exception $e){
 		logger( $e );
 	}
+    try{
+        register_graphql_field( 'RootQuery', 'globalSignUpForm', [
+            'type' => 'String',
+            'description' => __( 'Expose ACF Generated Sign Up Form in the GQL Schema', 'halfmoonbay' ),
+            'resolve' => function( $root, $args, $context, $info ) {
+                $field_group_key = "group_657dbb71113f3"; // Replace with your field group key
+                return json_encode( resolve_acf_group_fields( $field_group_key ) );
+            }
+        ] );
+    }
+    catch (Exception $e){
+        logger( $e );
+    }
 });
