@@ -100,8 +100,8 @@
         },
         {
             "key": "field_6563db1b65397",
-            "label": "Boat Image",
-            "name": "boat_image",
+            "label": "Image Gallery",
+            "name": "image_gallery",
             "aria-label": "",
             "type": "gallery",
             "instructions": "",
@@ -158,5 +158,5 @@
     "graphql_field_name": "guestBookEntry",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1702081835
+    "modified": 1703453300
 }

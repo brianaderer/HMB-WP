@@ -1,13 +1,42 @@
 {
-    "key": "group_6558e1bb7368d",
-    "title": "Contact Form Core",
+    "key": "group_6588a55f4a312",
+    "title": "Image Meta",
     "fields": [
         {
-            "key": "field_6588688f81c74",
-            "label": "User Info",
-            "name": "user_info",
+            "key": "field_6588a55f98fad",
+            "label": "Image UUID",
+            "name": "image_uuid",
             "aria-label": "",
-            "type": "clone",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "operator": "",
+                        "value": ""
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "front-end": 1,
+            "show_in_graphql": 1,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6588a5c184a8a",
+            "label": "Uploaded By",
+            "name": "uploaded_by",
+            "aria-label": "",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -18,41 +47,17 @@
             },
             "front-end": 1,
             "show_in_graphql": 1,
-            "clone": [
-                "group_6588681bac1ce"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
-            "key": "field_6558e3bb4211d",
-            "label": "Message",
-            "name": "message",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "show_in_graphql": 1,
             "default_value": "",
             "maxlength": "",
-            "rows": "",
             "placeholder": "",
-            "new_lines": "",
-            "disabled": 1
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
         [
             {
-                "param": "block",
+                "param": "attachment",
                 "operator": "==",
                 "value": "all"
             }
@@ -64,12 +69,12 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": false,
+    "active": true,
     "description": "",
     "show_in_rest": 0,
     "show_in_graphql": 0,
-    "graphql_field_name": "contactForm",
+    "graphql_field_name": "imageMeta",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703438517
+    "modified": 1703454170
 }

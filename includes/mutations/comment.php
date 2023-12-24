@@ -41,7 +41,7 @@ add_action( 'graphql_register_types', function() {
 			'type' => 'String',
 			'description' => 'The entry itself',
 		],
-		'boat_image' => [
+		'image_gallery' => [
 			'type' => ['list_of' => 'Int'],
 			'description' => 'The images to associate with the Guest Book Entry',
 		],
