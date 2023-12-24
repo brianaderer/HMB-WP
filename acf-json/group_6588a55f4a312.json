@@ -3,6 +3,28 @@
     "title": "Image Meta",
     "fields": [
         {
+            "key": "field_65746f594660e",
+            "label": "Featured",
+            "name": "featured",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Check this box if you want the image to appear in the featured images gallery",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "front-end": 1,
+            "show_in_graphql": 1,
+            "message": "Show in Featured gallery?",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_6588a55f98fad",
             "label": "Image UUID",
             "name": "image_uuid",
@@ -76,5 +98,5 @@
     "graphql_field_name": "imageMeta",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703454170
+    "modified": 1703454567
 }
