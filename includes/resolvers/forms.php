@@ -15,6 +15,9 @@ function resolve_acf_group_fields( string $field_group_key ):array {
 				if( array_key_exists( 'required', $field ) ):
 					$required = $field['required'];
 				endif;
+                if( array_key_exists( 'message', $field ) ):
+                    $message = $field['message'];
+                endif;
 				if( array_key_exists( 'front-end', $field ) ):
 					$front_end = $field['front-end'];
 				else:
@@ -28,6 +31,7 @@ function resolve_acf_group_fields( string $field_group_key ):array {
 				'placeholder' => $placeholder,
 				'display' => $front_end,
 				'required' => $required,
+				'message' => $message,
 			);
 		}
 return $result;
