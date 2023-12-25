@@ -16,9 +16,10 @@
                 "class": "",
                 "id": ""
             },
-            "show_in_graphql": 1,
+            "front-end": 1,
             "clone": [
-                "group_6558e1bb7368d"
+                "field_6558e3bb4211d",
+                "field_6558e1bc42119"
             ],
             "display": "seamless",
             "layout": "block",
@@ -152,5 +153,5 @@
     "graphql_field_name": "guestBookEntry",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703462698
+    "modified": 1703479226
 }

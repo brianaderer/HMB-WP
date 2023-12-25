@@ -40,10 +40,11 @@
                 "class": "",
                 "id": ""
             },
+            "front-end": 1,
             "show_in_graphql": 1,
             "default_value": "",
             "maxlength": "",
-            "rows": "",
+            "rows": 8,
             "placeholder": "",
             "new_lines": "",
             "disabled": 1
@@ -71,5 +72,5 @@
     "graphql_field_name": "contactForm",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703438517
+    "modified": 1703479316
 }
