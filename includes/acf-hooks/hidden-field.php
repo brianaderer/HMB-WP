@@ -14,6 +14,8 @@ $fields = array (
 	'phone_number',
 	'boat_length_loa',
 	'draft',
+    'image_uuid',
+    'uploaded_by'
 );
 foreach ( $fields as $field ):
 	add_filter('acf/load_field/name=' . $field , 'disable_acf_load_field');

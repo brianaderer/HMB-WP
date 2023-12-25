@@ -98,4 +98,17 @@ add_action( 'graphql_register_types', function() {
     catch (Exception $e){
         logger( $e );
     }
+    try{
+        register_graphql_field( 'AcfUploadMediaForm', 'mediaData', [
+            'type' => 'String',
+            'description' => __( 'Expose ACF Generated User Media Upload Form in the GQL Schema', 'halfmoonbay' ),
+            'resolve' => function( $root, $args, $context, $info ) {
+                $field_group_key = "group_6588ea14728ac"; // Replace with your field group key
+                return json_encode( resolve_acf_group_fields( $field_group_key ) );
+            }
+        ] );
+    }
+    catch (Exception $e){
+        logger( $e );
+    }
 });

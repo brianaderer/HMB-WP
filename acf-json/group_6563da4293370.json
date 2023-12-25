@@ -99,11 +99,11 @@
             "disabled": 0
         },
         {
-            "key": "field_6563db1b65397",
-            "label": "Image Gallery",
-            "name": "image_gallery",
+            "key": "field_6588c70c459d6",
+            "label": "Uploader",
+            "name": "uploader",
             "aria-label": "",
-            "type": "gallery",
+            "type": "clone",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -114,19 +114,13 @@
             },
             "front-end": 1,
             "show_in_graphql": 1,
-            "return_format": "array",
-            "library": "all",
-            "min": "",
-            "max": "",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "insert": "append",
-            "preview_size": "medium"
+            "clone": [
+                "group_6588c6e660f8b"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -158,5 +152,5 @@
     "graphql_field_name": "guestBookEntry",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703453300
+    "modified": 1703462698
 }
