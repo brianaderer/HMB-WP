@@ -7,7 +7,7 @@
             "label": "Tagline",
             "name": "tagline",
             "aria-label": "",
-            "type": "textarea",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -17,6 +17,28 @@
                 "id": ""
             },
             "front-end": 0,
+            "show_in_graphql": 1,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_658dcb29f1c22",
+            "label": "Gallery Paragraph",
+            "name": "gallery_paragraph",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "front-end": 1,
             "show_in_graphql": 1,
             "default_value": "",
             "maxlength": "",
@@ -105,5 +127,5 @@
     "graphql_field_name": "gallery",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703786110
+    "modified": 1703791560
 }

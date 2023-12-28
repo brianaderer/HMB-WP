@@ -8,10 +8,13 @@ add_action('graphql_register_types', function() {
             // Assuming $root is the post object
             $tagline = $data['tagline'];
             $gallery_type = $data['gallery_type'];
+            $gallery_paragraph = $data['gallery_paragraph'];
             $image_gallery = [];
             foreach ( $data['image_gallery'] as $id ):
                 $url = wp_get_attachment_url( $id );
                 $image = wp_get_attachment_metadata( $id );
+                $image_alt = get_post_meta($id, '_wp_attachment_image_alt', TRUE);
+                $image_title = get_the_title($id);
                 $image_gallery[] = array(
                   'url' => $url,
                   'caption' => $image['image_meta']['caption'],
@@ -21,8 +24,11 @@ add_action('graphql_register_types', function() {
             // Prepare the data to return
             $data = [
                 'tagline' => $tagline,
-                'image_gallery' => $image_gallery,
-                'gallery_type' => $gallery_type,
+                'imageGallery' => $image_gallery,
+                'galleryType' => $gallery_type,
+                'galleryParagraph' => $gallery_paragraph,
+                'alt' => $image_alt,
+                'title' => $image_title,
             ];
 
             // Encode data as JSON string
