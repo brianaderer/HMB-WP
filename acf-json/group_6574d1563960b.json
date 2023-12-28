@@ -3,6 +3,28 @@
     "title": "Gallery",
     "fields": [
         {
+            "key": "field_6574d2b592806",
+            "label": "Tagline",
+            "name": "tagline",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "front-end": 0,
+            "show_in_graphql": 1,
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_6574d156ddf5a",
             "label": "Image Gallery",
             "name": "image_gallery",
@@ -33,11 +55,11 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6574d2b592806",
-            "label": "Tagline",
-            "name": "tagline",
+            "key": "field_658db29d48650",
+            "label": "Gallery Type",
+            "name": "gallery_type",
             "aria-label": "",
-            "type": "textarea",
+            "type": "select",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -46,21 +68,27 @@
                 "class": "",
                 "id": ""
             },
-            "front-end": 1,
+            "front-end": 0,
             "show_in_graphql": 1,
-            "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
+            "choices": {
+                "static": "Static",
+                "revolving": "Revolving"
+            },
+            "default_value": "static",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
         }
     ],
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "gallery"
+                "value": "acf\/gallery"
             }
         ]
     ],
@@ -73,9 +101,9 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "show_in_graphql": 0,
+    "show_in_graphql": 1,
     "graphql_field_name": "gallery",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1702155003
+    "modified": 1703786110
 }
