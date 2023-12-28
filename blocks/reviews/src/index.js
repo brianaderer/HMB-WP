@@ -31,7 +31,7 @@ registerBlockType( metadata.name, {
 	 */
 	edit: Edit,
 	attributes: {
-		additionalData: {
+		headline: {
 			type: 'string',
 			default: ''
 		},

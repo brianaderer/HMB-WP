@@ -21,6 +21,10 @@
     "max_pages": {
       "type": "integer",
       "default": 1
+    },
+    "headline": {
+      "type": "string",
+      "default": ""
     }
   }
 }

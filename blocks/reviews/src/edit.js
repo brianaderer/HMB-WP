@@ -12,6 +12,7 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps } from '@wordpress/block-editor';
+import { TextControl } from "@wordpress/components";
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -29,10 +30,18 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit() {
+export default function Edit({attributes, setAttributes}) {
 	return (
-		<p { ...useBlockProps() }>
-			{ __( 'Reviews – hello from the editor!', 'reviews' ) }
+		<div { ...useBlockProps() }>
+		<p>
+			{ __( 'Reviews - This block will display a rotating gallery of reviews', 'reviews' ) }
 		</p>
+			<TextControl
+
+				label="This is the Headline that will display on the page"
+				value={ attributes.headline }
+				onChange={ ( value ) => setAttributes({headline: value} ) }
+			/>
+		</div>
 	);
 }
