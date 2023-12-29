@@ -1,41 +1,11 @@
 {
-    "key": "group_6588c6e660f8b",
-    "title": "Uploader",
+    "key": "group_658ee536bfc2e",
+    "title": "User Info",
     "fields": [
         {
-            "key": "field_6563db1b65397",
-            "label": "Image Gallery",
-            "name": "image_gallery",
-            "aria-label": "",
-            "type": "gallery",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "front-end": 1,
-            "show_in_graphql": 1,
-            "return_format": "array",
-            "library": "all",
-            "min": "",
-            "max": "",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "insert": "append",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_658ed189d9d08",
-            "label": "Form Header",
-            "name": "form_header",
+            "key": "field_658ee55e81d77",
+            "label": "Header",
+            "name": "header",
             "aria-label": "",
             "type": "clone",
             "instructions": "",
@@ -49,7 +19,31 @@
             "front-end": 1,
             "show_in_graphql": 1,
             "clone": [
-                "field_658ed189d9d08"
+                "group_658edad07880a"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_658ee5376dfa5",
+            "label": "Info",
+            "name": "info",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "front-end": 1,
+            "show_in_graphql": 1,
+            "clone": [
+                "group_6588681bac1ce"
             ],
             "display": "seamless",
             "layout": "block",
@@ -60,9 +54,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "block",
                 "operator": "==",
-                "value": "post"
+                "value": "acf\/user-info-form"
             }
         ]
     ],
@@ -76,8 +70,8 @@
     "description": "",
     "show_in_rest": 0,
     "show_in_graphql": 0,
-    "graphql_field_name": "uploader",
+    "graphql_field_name": "userInfo",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703858613
+    "modified": 1703863769
 }

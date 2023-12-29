@@ -3,6 +3,29 @@
     "title": "User Info Core",
     "fields": [
         {
+            "key": "field_658ed1df62d3a",
+            "label": "Form Header",
+            "name": "form_header",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "front-end": 1,
+            "clone": [
+                "field_658ed1df62d3a"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_6558e1bc42119",
             "label": "Full Name",
             "name": "full_name",
@@ -85,12 +108,12 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "",
     "show_in_rest": 0,
     "show_in_graphql": 0,
     "graphql_field_name": "userInfoCore",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703440437
+    "modified": 1703863747
 }

@@ -3,6 +3,30 @@
     "title": "Upload Media Form",
     "fields": [
         {
+            "key": "field_658ee103f0c4f",
+            "label": "Header",
+            "name": "header",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "front-end": 1,
+            "show_in_graphql": 1,
+            "clone": [
+                "group_658edad07880a"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_6588eb25ee277",
             "label": "Uploader Message",
             "name": "",
@@ -69,5 +93,5 @@
     "graphql_field_name": "uploadMediaForm",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703472041
+    "modified": 1703863287
 }

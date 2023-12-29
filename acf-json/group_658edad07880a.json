@@ -1,13 +1,13 @@
 {
-    "key": "group_6558e463060ab",
-    "title": "Dockominium Contact Form",
+    "key": "group_658edad07880a",
+    "title": "Form Header",
     "fields": [
         {
-            "key": "field_6558e46340100",
-            "label": "Contact Core",
-            "name": "contact_core",
+            "key": "field_658eda61a9f6a",
+            "label": "Form Headline",
+            "name": "form_headline",
             "aria-label": "",
-            "type": "clone",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,13 +16,13 @@
                 "class": "",
                 "id": ""
             },
-            "clone": [
-                "group_6558e1bb7368d"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
+            "front-end": 1,
+            "show_in_graphql": 1,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -43,9 +43,9 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "show_in_graphql": 1,
-    "graphql_field_name": "dockominiumContactForm",
+    "show_in_graphql": 0,
+    "graphql_field_name": "formHeader",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1700324724
+    "modified": 1703861102
 }
