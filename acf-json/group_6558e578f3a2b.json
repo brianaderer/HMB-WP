@@ -3,9 +3,9 @@
     "title": "Contact Form",
     "fields": [
         {
-            "key": "field_658ed0dd055dd",
-            "label": "Form Header",
-            "name": "form_header",
+            "key": "field_658ee86e3b47c",
+            "label": "Header",
+            "name": "header",
             "aria-label": "",
             "type": "clone",
             "instructions": "",
@@ -17,9 +17,8 @@
                 "id": ""
             },
             "front-end": 1,
-            "show_in_graphql": 1,
             "clone": [
-                "field_658ed0dd055dd"
+                "group_658edad07880a"
             ],
             "display": "seamless",
             "layout": "block",
@@ -121,5 +120,5 @@
     "graphql_field_name": "transientContactForm",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703858440
+    "modified": 1703864469
 }
