@@ -18,6 +18,8 @@ add_action('graphql_register_types', function() {
                 $image_gallery[] = array(
                   'url' => $url,
                   'caption' => $image['image_meta']['caption'],
+                    'alt' => $image_alt,
+                    'title' => $image_title,
                 );
             endforeach;
 
@@ -27,8 +29,6 @@ add_action('graphql_register_types', function() {
                 'imageGallery' => $image_gallery,
                 'galleryType' => $gallery_type,
                 'galleryParagraph' => $gallery_paragraph,
-                'alt' => $image_alt,
-                'title' => $image_title,
             ];
 
             // Encode data as JSON string
