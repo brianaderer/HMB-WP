@@ -6,6 +6,7 @@ function contact_block(): void {
 		'name'              => 'contact-form',
 		'title'             => __('Email Form'),
 		'description'       => __('Form for Transient Submissions'),
+        'supports'          => array( 'anchor' => true ),
 	));
 	}
 }

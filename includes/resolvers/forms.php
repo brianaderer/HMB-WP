@@ -47,8 +47,9 @@ add_action( 'graphql_register_types', function() {
 			'description' => __( 'Expose ACF Generated Guest Book Form in the GQL Schema', 'halfmoonbay' ),
 			'resolve' => function( $root, $args, $context, $info ) {
                 $headline = $root['attrs']['data']['form_headline'];
+                $anchor = $root['attrs']['anchor'];
 				$field_group_key = "group_6563da4293370"; // Replace with your field group key
-				return json_encode( array( 'formHeadline' => $headline, 'fields' => resolve_acf_group_fields( $field_group_key )) );
+                return json_encode( array( 'anchor' =>  $anchor,'formHeadline' => $headline, 'fields' => resolve_acf_group_fields( $field_group_key )) );
 			}
 		] );
 	}
@@ -61,8 +62,9 @@ add_action( 'graphql_register_types', function() {
 			'description' => __( 'Expose ACF Generated Contact Form in the GQL Schema', 'halfmoonbay' ),
 			'resolve' => function( $root, $args, $context, $info ) {
                 $headline = $root['attrs']['data']['form_headline'];
+                $anchor = $root['attrs']['anchor'];
 				$field_group_key = "group_6558e578f3a2b"; // Replace with your field group key
-                return json_encode( array( 'formHeadline' => $headline, 'fields' => resolve_acf_group_fields( $field_group_key )) );
+                return json_encode( array( 'anchor' =>  $anchor,'formHeadline' => $headline, 'fields' => resolve_acf_group_fields( $field_group_key )) );
 			}
 		] );
 	}
@@ -75,8 +77,9 @@ add_action( 'graphql_register_types', function() {
 			'description' => __( 'Expose ACF Generated Sign Up Form in the GQL Schema', 'halfmoonbay' ),
 			'resolve' => function( $root, $args, $context, $info ) {
                 $headline = $root['attrs']['data']['form_headline'];
+                $anchor = $root['attrs']['anchor'];
 				$field_group_key = "group_657dbb71113f3"; // Replace with your field group key
-                return json_encode( array( 'formHeadline' => $headline, 'fields' => resolve_acf_group_fields( $field_group_key )) );
+                return json_encode( array( 'anchor' =>  $anchor,'formHeadline' => $headline, 'fields' => resolve_acf_group_fields( $field_group_key )) );
 			}
 		] );
 	}
@@ -89,8 +92,9 @@ add_action( 'graphql_register_types', function() {
             'description' => __( 'Expose ACF Generated Sign Up Form in the GQL Schema', 'halfmoonbay' ),
             'resolve' => function( $root, $args, $context, $info ) {
                 $headline = $root['attrs']['data']['form_headline'];
+                $anchor = $root['attrs']['anchor'];
                 $field_group_key = "group_657dbb71113f3"; // Replace with your field group key
-                return json_encode( array( 'formHeadline' => $headline, 'fields' => resolve_acf_group_fields( $field_group_key )) );
+                return json_encode( array( 'anchor' =>  $anchor,'formHeadline' => $headline, 'fields' => resolve_acf_group_fields( $field_group_key )) );
             }
         ] );
     }
@@ -103,8 +107,9 @@ add_action( 'graphql_register_types', function() {
             'description' => __( 'Expose ACF Generated User Info Form in the GQL Schema', 'halfmoonbay' ),
             'resolve' => function( $root, $args, $context, $info ) {
                 $headline = $root['attrs']['data']['form_headline'];
+                $anchor = $root['attrs']['anchor'];
                 $field_group_key = "group_658ee536bfc2e"; // Replace with your field group key
-                return json_encode( array( 'formHeadline' => $headline, 'fields' => resolve_acf_group_fields( $field_group_key )) );
+                return json_encode( array( 'anchor' =>  $anchor,'formHeadline' => $headline, 'fields' => resolve_acf_group_fields( $field_group_key )) );
             }
         ] );
     }
@@ -117,8 +122,9 @@ add_action( 'graphql_register_types', function() {
             'description' => __( 'Expose ACF Generated User Media Upload Form in the GQL Schema', 'halfmoonbay' ),
             'resolve' => function( $root, $args, $context, $info ) {
                 $headline = $root['attrs']['data']['form_headline'];
+                $anchor = $root['attrs']['anchor'];
                 $field_group_key = "group_6588ea14728ac"; // Replace with your field group key
-                return json_encode( array( 'formHeadline' => $headline, 'fields' => resolve_acf_group_fields( $field_group_key )) );
+                return json_encode( array( 'anchor' =>  $anchor,'formHeadline' => $headline, 'fields' => resolve_acf_group_fields( $field_group_key )) );
             }
         ] );
     }

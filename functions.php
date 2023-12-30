@@ -52,4 +52,29 @@ if( is_admin() ):
 	enqueue_includes( $admin_path );
 endif;
 
+/**
+ * Enqueue Editor assets.
+ */
+function enqueue_editor_assets(): void
+{
+    $files = return_files( trailingslashit( get_stylesheet_directory() ) . 'blockJs/*.js' );
+    $deps = array(
+        'wp-blocks', 'wp-element', 'wp-i18n', 'wp-components', 'wp-editor'
+    );
+    foreach ( $files as $file ):
+        $filepath = str_replace( get_stylesheet_directory(), get_stylesheet_directory_uri(), $file );
+        $array = explode( '/', $filepath );
+        $handle = str_replace( '.js', '',array_pop( $array ) );
+        logger($handle);
+        wp_enqueue_script(
+            $handle,
+            $filepath,
+            $deps,
+            filemtime( $filepath ),
+            true,
+        );
+    endforeach;
+}
+add_action( 'enqueue_block_editor_assets', 'enqueue_editor_assets' );
+
 //Pencils Down. No more Edits to the Functions file. Make an Include.

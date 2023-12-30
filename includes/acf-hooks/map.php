@@ -6,6 +6,7 @@ function map_block(): void {
 		'name'              => 'hmb-map',
 		'title'             => __('Map'),
 		'description'       => __('Form for Transient Submissions'),
+        'supports'          => array( 'anchor' => true ),
 	));
 	}
 }

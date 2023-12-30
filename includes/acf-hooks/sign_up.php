@@ -13,6 +13,7 @@ function register_sign_up(): void {
             'category'          => 'formatting',
             'icon'              => 'admin-comments',
             'keywords'          => array( 'places'),
+            'supports'          => array( 'anchor' => true ),
         ));
     }
 
