@@ -26,7 +26,8 @@ if( is_graphql_http_request() ):
 					$query -> the_post();
 					$post = $query -> post;
 					$return_array = get_fields( $post -> ID );
-					$return_array[ 'title' ] = $post -> post_title;
+					$return_array['title'] = $post -> post_title;
+					$return_array['id'] = $post -> ID;
 					$array[] =  $return_array;
 					$json = htmlspecialchars_decode( json_encode( $array ) );
 				endwhile;
