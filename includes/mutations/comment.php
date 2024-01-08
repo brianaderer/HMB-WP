@@ -45,6 +45,10 @@ add_action( 'graphql_register_types', function() {
 			'type' => ['list_of' => 'Int'],
 			'description' => 'The images to associate with the Guest Book Entry',
 		],
+        'return_image_gallery' => [
+            'type' => ['list_of' => 'String'],
+            'description' => 'The populated returned image list',
+        ],
 	];
 	// Define the 'GuestBookEntry' object type that corresponds to the ACF field group
 	register_graphql_object_type('GuestBookEntry', [

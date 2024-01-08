@@ -21,8 +21,7 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "disabled": 1
+            "append": ""
         },
         {
             "key": "field_6563db4f90ac1",
@@ -43,8 +42,7 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "disabled": 1
+            "append": ""
         },
         {
             "key": "field_6558e675d2b93",
@@ -86,8 +84,7 @@
             "allow_null": 1,
             "ui": 0,
             "ajax": 0,
-            "placeholder": "",
-            "disabled": 1
+            "placeholder": ""
         },
         {
             "key": "field_6558e6aad2b94",
@@ -110,8 +107,7 @@
             "placeholder": "",
             "step": "",
             "prepend": "",
-            "append": "",
-            "disabled": 1
+            "append": ""
         },
         {
             "key": "field_6558e6c9d2b95",
@@ -134,8 +130,7 @@
             "placeholder": "",
             "step": "",
             "prepend": "",
-            "append": "",
-            "disabled": 1
+            "append": ""
         },
         {
             "key": "field_6558e6d7d2b96",
@@ -158,8 +153,7 @@
             "placeholder": "",
             "step": "",
             "prepend": "",
-            "append": "",
-            "disabled": 1
+            "append": ""
         }
     ],
     "location": [
@@ -167,7 +161,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "guest-book-entry"
             }
         ]
     ],
@@ -184,5 +178,5 @@
     "graphql_field_name": "boatInfoCore",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1702957553
+    "modified": 1704665148
 }

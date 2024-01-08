@@ -46,8 +46,7 @@
             "maxlength": "",
             "rows": 8,
             "placeholder": "",
-            "new_lines": "",
-            "disabled": 1
+            "new_lines": ""
         }
     ],
     "location": [
@@ -65,12 +64,12 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": false,
+    "active": true,
     "description": "",
     "show_in_rest": 0,
     "show_in_graphql": 0,
     "graphql_field_name": "contactForm",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703479316
+    "modified": 1704669974
 }

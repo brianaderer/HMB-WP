@@ -7,7 +7,7 @@
 //);
 //
 //function change_render_callback_for_query_pagination_numbers( array $settings, string $name ): array {
-//      if( $settings['name'] === 'acf/contact-form' ):
+//      if( $settings['name'] === 'core/heading' ):
 //        $settings['render_callback'] = 'render_query_pagination_numbers';
 //      endif;
 //    return $settings;
@@ -15,9 +15,8 @@
 //
 //function render_query_pagination_numbers( array $attributes, string $content, WP_Block $block ) {
 //
-//  //  logger( $attributes );
-////    logger( $content );
-////    logger( $block );
+//    logger( $attributes );
+//    logger( $content );
 //
 //    return $attributes;
 //}

@@ -45,7 +45,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "disabled": 1
+            "disabled": 0
         },
         {
             "key": "field_6558e3254211b",
@@ -66,7 +66,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "disabled": 1
+            "disabled": 0
         },
         {
             "key": "field_6558e3464211c",
@@ -90,7 +90,7 @@
             "step": "",
             "prepend": "",
             "append": "",
-            "disabled": 1
+            "disabled": 0
         }
     ],
     "location": [
@@ -108,12 +108,12 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": false,
+    "active": true,
     "description": "",
     "show_in_rest": 0,
     "show_in_graphql": 0,
     "graphql_field_name": "userInfoCore",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703863747
+    "modified": 1704670188
 }

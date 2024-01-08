@@ -50,7 +50,7 @@
             "label": "Map Description",
             "name": "map_description",
             "aria-label": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -61,11 +61,11 @@
             },
             "front-end": 1,
             "show_in_graphql": 1,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
             "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
+            "delay": 0
         }
     ],
     "location": [
@@ -90,5 +90,5 @@
     "graphql_field_name": "map",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703811044
+    "modified": 1704498233
 }
