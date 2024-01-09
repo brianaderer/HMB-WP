@@ -18,6 +18,7 @@ add_action(/**
                     $post = $query -> post;
                     $id = $post -> ID;
                     $fields = get_fields( $id );
+                    logger($fields['reply']);
                     $image_gallery = [];
                     foreach ($fields['image_gallery'] as $image):
                         $gallery = array(
@@ -33,6 +34,7 @@ add_action(/**
                     $image_gallery[] = json_encode( $gallery, true );
                     endforeach;
                     $content[] = array(
+                        'boat_length_loa' => $fields['boat_length_loa'],
                         'boat_name' => $fields['boat_name'],
                         'boat_type' => $fields['boat_type'],
                         'beam' => $fields['beam'],
@@ -41,6 +43,7 @@ add_action(/**
                         'message' => $fields['message'],
                         'year_make_model' => $fields['year_make_model'],
                         'return_image_gallery' => $image_gallery,
+                        'reply' => $fields['reply'],
                     );
                 endwhile;
             endif;
