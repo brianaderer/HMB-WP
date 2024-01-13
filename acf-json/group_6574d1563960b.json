@@ -90,11 +90,11 @@
                 "class": "",
                 "id": ""
             },
-            "front-end": 0,
             "show_in_graphql": 1,
             "choices": {
                 "static": "Static",
-                "revolving": "Revolving"
+                "revolving": "Revolving",
+                "masonry: Masonry": "masonry: Masonry"
             },
             "default_value": "static",
             "return_format": "value",
@@ -127,5 +127,5 @@
     "graphql_field_name": "gallery",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703791560
+    "modified": 1705113307
 }

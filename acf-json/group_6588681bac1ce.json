@@ -32,7 +32,7 @@
             "aria-label": "",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -44,8 +44,7 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "disabled": 0
+            "append": ""
         },
         {
             "key": "field_6558e3254211b",
@@ -115,5 +114,5 @@
     "graphql_field_name": "userInfoCore",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1704670188
+    "modified": 1705173460
 }
