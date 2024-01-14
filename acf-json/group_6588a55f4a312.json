@@ -22,8 +22,7 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "disabled": 1
+            "append": ""
         },
         {
             "key": "field_6588a5c184a8a",
@@ -45,8 +44,28 @@
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
-            "append": "",
-            "disabled": 1
+            "append": ""
+        },
+        {
+            "key": "field_65a3395d35d36",
+            "label": "Featured",
+            "name": "featured",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "message": "Display this image in the Featured Gallery. Please check the Caption if toggling to true.",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -71,5 +90,5 @@
     "graphql_field_name": "imageMeta",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1703814032
+    "modified": 1705195950
 }
