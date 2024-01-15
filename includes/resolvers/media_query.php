@@ -30,16 +30,18 @@ add_action( 'graphql_register_types', function() {
                         $url = get_attachment_link( $id );
                         $caption = wp_get_attachment_caption( $id );
                         $alt = get_post_meta($id, '_wp_attachment_image_alt', TRUE);
-                         $return_images[] = array(
-                            'permalink' => $url,
-                             'id' => $id,
-                             'size' => null,
-                             'type' => $post -> post_mime_type,
-                             'caption' => $caption === 'undefined' || $caption === null ? '' : $caption,
-                             'alt' => $alt,
-                             'title' => $post -> post_title,
-                             'timestamp' => $post -> post_date_gmt,
-                        );
+                        if( $url ):
+                             $return_images[] = array(
+                                'permalink' => $url,
+                                 'id' => $id,
+                                 'size' => null,
+                                 'type' => $post -> post_mime_type,
+                                 'caption' => $caption === 'undefined' || $caption === null ? '' : $caption,
+                                 'alt' => $alt,
+                                 'title' => $post -> post_title,
+                                 'timestamp' => $post -> post_date_gmt,
+                            );
+                        endif;
                     endwhile;
                 endif;
             endif;
