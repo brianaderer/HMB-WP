@@ -29,4 +29,4 @@ jobs:
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
           local-dir: ./  # Set the directory of your project to deploy
-          server-dir: /files/wp-content/themes/HMB  # Set the target directory on your server
+          server-dir: /files/wp-content/themes/HMB/  # Set the target directory on your server
