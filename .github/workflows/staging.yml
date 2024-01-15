@@ -28,6 +28,5 @@ jobs:
           server: ${{ secrets.SFTP_SERVER }}
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          ssh-private-key: ${{ secrets.SFTP_KEY }} # Uncomment if using SSH key
           local-dir: ./  # Set the directory of your project to deploy
           server-dir: /files/wp-content/themes/HMB  # Set the target directory on your server
