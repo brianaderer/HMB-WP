@@ -22,11 +22,12 @@ jobs:
       - name: Install PHP dependencies
         run: composer install --no-dev
 
-      - name: Deploy via SFTP
-        uses: SamKirkland/FTP-Deploy-Action@4.2.0
+      - name: deploy file
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: sftp://3.133.135.142
-          username: ${{ secrets.SFTP_USERNAME }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          local-dir: ./  # Set the directory of your project to deploy
-          server-dir: /files/wp-content/themes/HMB/  # Set the target directory on your server
+          username: 'stagingadmin'
+          server: 3.133.135.142
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local_path: './*'
+          remote_path: '/files/wp-content/themes/HMB'
+          sftpArgs: '-o ConnectTimeout=5'
