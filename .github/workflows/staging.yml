@@ -27,7 +27,8 @@ jobs:
         with:
           username: 'stagingadmin'
           server: 3.133.135.142
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh_private_key: ${{ secrets.SFTP_KEY }}
+          password: ${{ secrets.SFTP_PASSWORD }}
           local_path: './*'
           remote_path: '/files/wp-content/themes/HMB'
           sftpArgs: '-o ConnectTimeout=5'
