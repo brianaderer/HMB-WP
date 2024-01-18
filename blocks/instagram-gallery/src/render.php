@@ -7,6 +7,7 @@ $json = file_get_contents( 'https://graph.instagram.com/me/media?fields=id,media
 $args = array(
 	'post_type' => 'attachment',
 	'post_status' => 'inherit',
+	'posts_per_page' => -1,
 	'meta_query' => array(
 		array(
 			'key' => 'featured',
