@@ -27,9 +27,9 @@ add_action( 'graphql_register_types', function() {
                         $query -> the_post();
                         $post = $query -> post;
                         $id = $post -> ID;
-                        $url = get_attachment_link( $id );
+                        $url = wp_get_attachment_url( $id );
                         $caption = wp_get_attachment_caption( $id );
-                        $alt = get_post_meta($id, '_wp_attachment_image_alt', TRUE);
+                        $alt = get_post_meta( $id, '_wp_attachment_image_alt', TRUE );
                         if( $url ):
                              $return_images[] = array(
                                 'permalink' => $url,

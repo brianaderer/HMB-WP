@@ -21,7 +21,6 @@ add_action(/**
                     $post = $query -> post;
                     $id = $post -> ID;
                     $fields = get_fields( $id );
-                    logger($fields['reply']);
                     $image_gallery = [];
                     foreach ($fields['image_gallery'] as $image):
                         $gallery = array(
