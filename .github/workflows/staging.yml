@@ -22,13 +22,13 @@ jobs:
       - name: Install PHP dependencies
         run: composer install --no-dev
 
-      #clean push, maybe need to run a manual delete first
-      - name: SSH-Deploy-Action
-        uses: burnett01/rsync-deployments@6.0.0
+      - name: deploy file
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          switches: -avzr --delete --exclude='.env'
-          path: ./
-          remote_path: ./files/wp-content/themes/HMB/
-          remote_host: 18.226.214.105
-          remote_user: stagingadmin
-          remote_key: ${{ secrets.SFTP_KEY }}
+          username: 'stagingadmin'
+          server: 18.226.214.105
+          ssh_private_key: ${{ secrets.SFTP_KEY }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          local_path: './*'
+          remote_path: './files/wp-content/themes/HMB/'
+          sftpArgs: '-o ConnectTimeout=5'
