@@ -29,7 +29,7 @@ if( $query -> have_posts() ):
 		$post = $query -> post;
 		$type = ucfirst( explode('/', $post -> post_mime_type )[0] );
 		$id = $post -> ID;
-		$url = get_attachment_link( $id );
+		$url = wp_get_attachment_url( $id );
 		$object = new StdClass ();
 		$object -> id = $id;
 		$object -> media_type = $type;

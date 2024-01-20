@@ -7,6 +7,7 @@ $json = file_get_contents( 'https://graph.instagram.com/me/media?fields=id,media
 $args = array(
 	'post_type' => 'attachment',
 	'post_status' => 'inherit',
+	'posts_per_page' => -1,
 	'meta_query' => array(
 		array(
 			'key' => 'featured',
@@ -28,7 +29,7 @@ if( $query -> have_posts() ):
 		$post = $query -> post;
 		$type = ucfirst( explode('/', $post -> post_mime_type )[0] );
 		$id = $post -> ID;
-		$url = get_attachment_link( $id );
+		$url = wp_get_attachment_url( $id );
 		$object = new StdClass ();
 		$object -> id = $id;
 		$object -> media_type = $type;
