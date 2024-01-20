@@ -3,50 +3,6 @@
     "title": "Gallery",
     "fields": [
         {
-            "key": "field_6574d2b592806",
-            "label": "Tagline",
-            "name": "tagline",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "front-end": 0,
-            "show_in_graphql": 1,
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_658dcb29f1c22",
-            "label": "Gallery Paragraph",
-            "name": "gallery_paragraph",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "front-end": 1,
-            "show_in_graphql": 1,
-            "default_value": "",
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
             "key": "field_6574d156ddf5a",
             "label": "Image Gallery",
             "name": "image_gallery",
@@ -127,5 +83,5 @@
     "graphql_field_name": "gallery",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1705113307
+    "modified": 1705738520
 }

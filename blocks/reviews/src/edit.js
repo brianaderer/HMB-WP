@@ -36,12 +36,6 @@ export default function Edit({attributes, setAttributes}) {
 		<p>
 			{ __( 'Reviews - This block will display a rotating gallery of reviews', 'reviews' ) }
 		</p>
-			<TextControl
-
-				label="This is the Headline that will display on the page"
-				value={ attributes.headline }
-				onChange={ ( value ) => setAttributes({headline: value} ) }
-			/>
 		</div>
 	);
 }
