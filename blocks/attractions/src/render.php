@@ -25,6 +25,7 @@ if( is_graphql_http_request() ):
 			while( $query -> have_posts() ):
 					$query -> the_post();
 					$post = $query -> post;
+					logger($post);
 					$return_array = get_fields( $post -> ID );
 					$return_array['title'] = $post -> post_title;
 					$return_array['id'] = $post -> ID;
