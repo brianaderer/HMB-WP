@@ -11,7 +11,7 @@ add_action('graphql_register_types', function() {
             $gallery_paragraph = $data['gallery_paragraph'];
             $image_gallery = [];
             foreach ( $data['image_gallery'] as $id ):
-                $url = wp_get_attachment_url( $id );
+                $url = wp_get_attachment_image_src( $id, 'medium_large' );
                 $image = wp_get_attachment_metadata( $id );
                 $image_alt = get_post_meta($id, '_wp_attachment_image_alt', TRUE);
                 $image_title = get_the_title($id);
