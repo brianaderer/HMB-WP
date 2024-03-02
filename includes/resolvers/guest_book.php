@@ -25,7 +25,7 @@ add_action(/**
                     foreach ($fields['image_gallery'] as $image):
                         $gallery = array(
                             'ID' => $image['ID'],
-                            'src' => $image['url'],
+                            'src' => wp_get_attachment_image_src( $image['ID'], 'medium_large' )[0],
                             'description' => $image['description'],
                             'name' => $image['name'],
                             'caption' => $image['caption'],
