@@ -1,5 +1,4 @@
 <?php
-//repush
 add_action(/**
  * @throws Exception
  */ 'graphql_register_types', function() {

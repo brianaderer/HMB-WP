@@ -26,7 +26,7 @@ jobs:
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           username: 'stagingadmin'
-          server: 18.188.94.119
+          server: 18.118.19.128
           ssh_private_key: ${{ secrets.SFTP_KEY }}
           password: ${{ secrets.SFTP_PASSWORD }}
           local_path: './*'
