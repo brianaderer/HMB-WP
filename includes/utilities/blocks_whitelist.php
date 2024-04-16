@@ -15,7 +15,7 @@ function our_allowed_block_types( $allowed_blocks ) {
         'acf/hmb-map',
         'acf/sign-up-form',
         'acf/upload-media-form',
-        'acf/userinfo-form',
+        'acf/user-info-form',
         'core/button',
         'core/buttons',
         'core/column',
