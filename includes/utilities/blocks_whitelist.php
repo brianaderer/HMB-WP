@@ -4,7 +4,7 @@
  * Only allow certain blocks to be used
  */
 
-add_filter( 'allowed_block_types', 'our_allowed_block_types' );
+add_filter( 'allowed_block_types_all', 'our_allowed_block_types' );
 
 function our_allowed_block_types( $allowed_blocks ) {
 
@@ -32,5 +32,4 @@ function our_allowed_block_types( $allowed_blocks ) {
         'create-block/instagram-gallery',
         'create-block/reviews',
     );
-
 }
