@@ -25,7 +25,7 @@ jobs:
       - name: Rsync Theme Files
         uses: burnett01/rsync-deployments@6.0.0
         with:
-          switches: -avzr --delete
+          switches: -avzr --delete --exclude=.env
           path: './'
           remote_path: '~/files/wp-content/themes/HMB/'
           remote_host: 3.15.144.253
