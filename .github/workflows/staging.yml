@@ -13,22 +13,23 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set up PHP
-        uses: shivammathur/setup-php@v2
+      - name: Rsync Theme Files
+        uses: burnett01/rsync-deployments@6.0.0
         with:
-          php-version: '8.2'  # Set the PHP version you need
-          tools: composer      # This installs Composer
+          switches: -avzr --delete
+          path: './'
+          remote_path: '~/files/wp-content/themes/HMB/'
+          remote_host: 3.15.144.253
+          remote_port: 22
+          remote_user: stagingadmin
+          remote_key: ${{ secrets.SFTP_KEY }}
 
-      - name: Install PHP dependencies
-        run: composer install --no-dev
-
-      - name: deploy file
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      - name: Restart Application and Clear Cache
+        uses: appleboy/ssh-action@master
         with:
-          username: 'stagingadmin'
-          server: 3.15.144.253
-          ssh_private_key: ${{ secrets.SFTP_KEY }}
-          password: ${{ secrets.SFTP_PASSWORD }}
-          local_path: './*'
-          remote_path: './files/wp-content/themes/HMB/'
-          sftpArgs: '-o ConnectTimeout=5'
+          host: 3.15.144.253
+          username: stagingadmin
+          key: ${{ secrets.SFTP_KEY }}
+          script: |
+            rm -rf /var/cache/nginx/*
+            pm2 restart all
