@@ -32,4 +32,3 @@ jobs:
           key: ${{ secrets.SFTP_KEY }}
           script: |
             rm -rf /var/cache/nginx/*
-            pm2 restart all
