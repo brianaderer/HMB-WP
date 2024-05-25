@@ -1,0 +1,34 @@
+name: Deploy to SpinUpWP
+
+on:
+  push:
+    branches:
+      - staging  # Set this to your deployment branch, e.g., main or master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Rsync Theme Files
+        uses: burnett01/rsync-deployments@6.0.0
+        with:
+          switches: -avzr --delete
+          path: './'
+          remote_path: '~/files/wp-content/themes/HMB/'
+          remote_host: 3.15.144.253
+          remote_port: 22
+          remote_user: admin
+          remote_key: ${{ secrets.SFTP_KEY }}
+
+      - name: Restart Application and Clear Cache
+        uses: appleboy/ssh-action@master
+        with:
+          host: 3.15.144.253
+          username: admin
+          key: ${{ secrets.SFTP_KEY }}
+          script: |
+            rm -rf /var/cache/nginx/*
