@@ -41,3 +41,4 @@ jobs:
           key: ${{ secrets.SFTP_KEY }}
           script: |
             rm -rf /var/cache/nginx/*
+#            repush
