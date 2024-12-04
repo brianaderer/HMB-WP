@@ -55,7 +55,7 @@ add_action( 'graphql_register_types', function() {
         ],
 	];
 	// Define the 'GuestBookEntry' object type that corresponds to the ACF field group
-	register_graphql_object_type('GuestBookEntry', [
+	register_graphql_object_type('GuestBookEntryMutation', [
 		'description' => 'Represents a guest book entry with details about a boat',
 		'fields' => $boat_type_fields,
 	]);
@@ -69,7 +69,7 @@ add_action( 'graphql_register_types', function() {
 	/**
 	 * @throws Exception
 	 */
-	register_graphql_mutation('createGuestBookEntry', [
+	register_graphql_mutation('createGuestBookEntryMutation', [
 		'inputFields' => [
 			'title' => [
 				'type' => 'String',

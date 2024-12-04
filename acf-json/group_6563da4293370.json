@@ -172,8 +172,8 @@
     "description": "",
     "show_in_rest": 0,
     "show_in_graphql": 1,
-    "graphql_field_name": "guestBookEntry",
+    "graphql_field_name": "guestBookEntryField",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1705173622
+    "modified": 1733253454
 }
