@@ -90,7 +90,6 @@ add_action( 'graphql_register_types', function() {
 		'mutateAndGetPayload' => function($input, $context, $info) {
 			// Logic to create a comment and save guest book entry data
 			// Use $input['content'], $input['commentOn'], $input['guestBookEntry'], etc.
-
 			$args = array(
 				'post_type' => 'guest-book-entry',
 				'post_title' => $input['title'],

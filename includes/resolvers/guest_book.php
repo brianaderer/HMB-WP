@@ -1,9 +1,53 @@
 <?php
+
+
 add_action(/**
  * @throws Exception
  */ 'graphql_register_types', function () {
+
+    register_graphql_object_type('ImageGalleryField', [
+        'description' => 'An image gallery field',
+        'fields' => [
+            'ID' => ['type' => 'Int'],
+            'src' => ['type' => 'String'],
+            'description' => ['type' => 'String'],
+            'name' => ['type' => 'String'],
+            'caption' => ['type' => 'String'],
+            'alt' => ['type' => 'String'],
+            'title' => ['type' => 'String'],
+            'type' => ['type' => 'String'],
+        ],
+    ]);
+
+    register_graphql_object_type('GuestBookContent', [
+        'description' => 'The Content of the Guest Book Entry',
+        'fields' => [
+            'message' => ['type' => 'String'],
+            'name' => ['type' => 'String'],
+        ]
+    ]);
+
+    // Define the compound structure
+    register_graphql_object_type('ExtendedGuestBookEntry', [
+        'description' => 'An extended guest book entry combining ACF fields and custom fields',
+        'fields' => [
+            'acfFields' => [
+                'type' => 'GuestBookEntryField', // Use the existing ACF-defined type
+                'description' => 'Fields managed by ACF',
+            ],
+            'customFields' => [
+                'type' => 'GuestBookContent',
+                'description' => 'Custom fields or additional data',
+            ],
+            'imageGallery' => [
+                'type' => ['list_of' => 'ImageGalleryField'],
+                'description' => 'Custom image gallery field',
+            ],
+        ],
+    ]);
+
     register_graphql_field('CreateBlockGuestbook', 'content', [
-        'type' => ['list_of' => "GuestBookEntry"],
+        'type' => ['list_of' => "ExtendedGuestBookEntry"],
         'description' => 'Custom attributes for the guest book block',
         'resolve' => function ($root, $args, $context, $info) {
             $content = [];
@@ -23,7 +67,7 @@ add_action(/**
                     $fields = get_fields( $id );
                     $image_gallery = [];
                     foreach ($fields['image_gallery'] as $image):
-                        $gallery = array(
+                        $image_gallery[] = array(
                             'ID' => $image['ID'],
                             'src' => wp_get_attachment_image_src( $image['ID'], 'medium_large' )[0],
                             'description' => $image['description'],
@@ -33,19 +77,22 @@ add_action(/**
                             'title' => $image['title'],
                             'type' => $image['type'],
                         );
-                    $image_gallery[] = json_encode( $gallery, true );
                     endforeach;
                     $content[] = array(
-                        'boat_length_loa' => $fields['boat_length_loa'],
-                        'boat_name' => $fields['boat_name'],
-                        'boat_type' => $fields['boat_type'],
-                        'beam' => $fields['beam'],
-                        'draft' => $fields['draft'],
-                        'full_name' => $fields['full_name'],
-                        'message' => $fields['message'],
-                        'year_make_model' => $fields['year_make_model'],
-                        'return_image_gallery' => $image_gallery,
-                        'reply' => $fields['reply'],
+                        'acfFields' => [
+                            'boat_length_loa' => $fields['boat_length_loa'],
+                            'boat_name' => $fields['boat_name'],
+                            'boat_type' => $fields['boat_type'],
+                            'beam' => $fields['beam'],
+                            'draft' => $fields['draft'],
+                            'reply' => $fields['reply'],
+                            'year_make_model' => $fields['year_make_model'],
+                        ],
+                        'customFields' => [
+                            'message' => $fields['message'],
+                            'name' => $fields['full_name'],
+                        ],
+                        'imageGallery' => $image_gallery,
                     );
                 endwhile;
             endif;

@@ -3,30 +3,6 @@
     "title": "Guest Book Entry",
     "fields": [
         {
-            "key": "field_658edb2bf37d4",
-            "label": "Header",
-            "name": "header",
-            "aria-label": "",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "front-end": 1,
-            "show_in_graphql": 1,
-            "clone": [
-                "group_658edad07880a"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
-        },
-        {
             "key": "field_656b4df48a070",
             "label": "Contact Info",
             "name": "contact_info",
@@ -48,33 +24,6 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
-        },
-        {
-            "key": "field_656b4e318a072",
-            "label": "Approved",
-            "name": "approved",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "front-end": 0,
-            "show_in_graphql": 1,
-            "choices": {
-                "true": "Approved",
-                "false": "Rejected"
-            },
-            "default_value": "null",
-            "return_format": "value",
-            "allow_null": 1,
-            "other_choice": 0,
-            "layout": "vertical",
-            "save_other_choice": 0
         },
         {
             "key": "field_656b4e1a8a071",
@@ -175,5 +124,5 @@
     "graphql_field_name": "guestBookEntryField",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1733253454
+    "modified": 1733511806
 }
