@@ -1,13 +1,9 @@
 <?php
 /**
  * @see https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-metadata.md#render
- */
-?>
-<?php
-//logger( $attributes );
-/**
  * Setup query to show the ‘attractions’ post type with ‘8’ posts.
  */
+
 $args = array(
 	'post_type' => 'attractions',
 	'post_status' => 'publish',
@@ -21,18 +17,55 @@ $groups = acf_get_field_groups( array( 'post_type' => $args['post_type'] ) );
 acf_form_head();
 if( is_graphql_http_request() ):
 	$array = [];
-			if( $query -> have_posts() ):
-			while( $query -> have_posts() ):
-					$query -> the_post();
-					$post = $query -> post;
-					$return_array = get_fields( $post -> ID );
-					$return_array['title'] = $post -> post_title;
-					$return_array['id'] = $post -> ID;
-					$array[] =  $return_array;
-					$json = htmlspecialchars_decode( json_encode( $array ) );
-				endwhile;
-				echo( $json );
-			endif;
+	if ($query->have_posts()):
+		while ($query->have_posts()):
+			$query->the_post();
+			$post = $query->post;
+
+			// Get ACF fields and other post data
+			$return_array = get_fields($post->ID);
+			$return_array['title'] = $post->post_title;
+			$return_array['id'] = $post->ID;
+
+			// Check if 'location' exists
+			if (empty($return_array['location'])) {
+				continue; // Skip if 'location' is missing
+			}
+
+			// Fetch the 'location_data' post meta field
+			$location_data = get_post_meta($post->ID, 'location_data', true);
+			$place_id = $return_array['location']['place_id'];
+
+			// Log a message if 'location_data' is empty
+			if (empty($location_data) || $location_data -> place_id !== $place_id) {
+				try{
+					$location = $return_array['location'];
+					$destination = $location['lat'] . ', ' . $location['lng'];
+					logger($destination);
+					$response = get_route_distance($destination);
+					$object = json_decode($response);
+					if( $object -> meta -> code  === 200 ):
+						$data = $object -> routes;
+						$data -> place_id = $place_id;
+						update_post_meta( $post -> ID, 'location_data', $data );
+						$return_array['distance'] = $data;
+					endif;
+				} catch (Exception $e){
+					logger($e);
+				}
+			} else {
+				$return_array['distance'] = $location_data;
+			}
+
+			// Append to the array
+			$array[] = $return_array;
+		endwhile;
+
+		// Encode the array to JSON and output it
+		$json = htmlspecialchars_decode(json_encode($array));
+		echo $json;
+	endif;
+
 elseif( is_admin_request() && is_rest_api_request() ):
 	?>
 
