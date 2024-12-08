@@ -32,7 +32,7 @@
             "label": "Background Media",
             "name": "background_media",
             "aria-label": "",
-            "type": "image",
+            "type": "file",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -43,15 +43,10 @@
             },
             "return_format": "id",
             "library": "all",
-            "min_width": "",
-            "min_height": "",
             "min_size": "",
-            "max_width": "",
-            "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium",
+            "allow_in_bindings": 1,
             "show_in_graphql": 1,
             "graphql_description": "",
             "graphql_field_name": "backgroundMedia"
@@ -100,5 +95,5 @@
     "graphql_field_name": "heroSlide",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1733668079
+    "modified": 1733682872
 }

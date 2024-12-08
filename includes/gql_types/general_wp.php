@@ -22,12 +22,20 @@ class ImageType {
     public function fill( int $id ): bool{
         try{
             $this -> iD = $id;
-            $this -> src = wp_get_attachment_image_src( $id, 'full' )[0];
             $this -> title = get_the_title($id);
             $this -> caption = wp_get_attachment_caption($id);
             $this -> description = get_post_field('post_content', $id);
             $this -> alt = get_post_meta($id, '_wp_attachment_image_alt', true);
             $this -> type = get_post_mime_type( $id );
+            $type = $this -> type;
+            $type_array = explode('/', $this -> type);
+            switch( $type_array[0] ):
+                case( 'image' ):
+                    $this -> src = wp_get_attachment_image_src( $id, 'full' )[0];
+                    break;
+                case( 'video' ):
+                    $this -> src = wp_get_attachment_url( $id );
+            endswitch;
             return true;
         } catch (Exception $e) {
             return false;
