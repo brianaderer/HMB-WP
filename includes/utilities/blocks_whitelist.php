@@ -31,5 +31,6 @@ function our_allowed_block_types( $allowed_blocks ) {
         'create-block/guestbook',
         'create-block/instagram-gallery',
         'create-block/reviews',
+        'create-block/hero-section',
     );
 }

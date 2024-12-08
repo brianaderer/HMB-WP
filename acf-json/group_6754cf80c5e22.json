@@ -57,31 +57,6 @@
             "graphql_field_name": "backgroundMedia"
         },
         {
-            "key": "field_6754cff8cd0ab",
-            "label": "CTA Text",
-            "name": "cta_text",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "show_in_graphql": 1,
-            "graphql_description": "",
-            "graphql_field_name": "ctaText",
-            "graphql_non_null": 0
-        },
-        {
             "key": "field_6754cfd1cd0aa",
             "label": "Link",
             "name": "link",
@@ -95,7 +70,7 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "url",
+            "return_format": "array",
             "allow_in_bindings": 0,
             "show_in_graphql": 1,
             "graphql_description": "",
@@ -125,5 +100,5 @@
     "graphql_field_name": "heroSlide",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1733611757
+    "modified": 1733668079
 }

@@ -5,19 +5,6 @@ add_action(/**
  * @throws Exception
  */ 'graphql_register_types', function () {
 
-    register_graphql_object_type('ImageGalleryField', [
-        'description' => 'An image gallery field',
-        'fields' => [
-            'ID' => ['type' => 'Int'],
-            'src' => ['type' => 'String'],
-            'description' => ['type' => 'String'],
-            'name' => ['type' => 'String'],
-            'caption' => ['type' => 'String'],
-            'alt' => ['type' => 'String'],
-            'title' => ['type' => 'String'],
-            'type' => ['type' => 'String'],
-        ],
-    ]);
 
     register_graphql_object_type('GuestBookContent', [
         'description' => 'The Content of the Guest Book Entry',
@@ -40,8 +27,8 @@ add_action(/**
                 'description' => 'Custom fields or additional data',
             ],
             'imageGallery' => [
-                'type' => ['list_of' => 'ImageGalleryField'],
-                'description' => 'Custom image gallery field',
+                'type' => ['list_of' => 'Image'],
+                'description' => 'Custom image field',
             ],
         ],
     ]);
