@@ -80,8 +80,10 @@ add_action('graphql_register_types', function () {
                     $hero_object = new HeroType();
                     $hero_object -> text ->subheading = $fields['subheadline'];
                     $hero_object -> image -> fill( $fields['background_media'] );
-                    $hero_object -> cta -> link = $fields['link']['url'];
-                    $hero_object -> cta -> value = $fields['link']['title'];
+                    if( $fields['link'] ):
+                        $hero_object -> cta -> link = $fields['link']['url'];
+                        $hero_object -> cta -> value = $fields['link']['title'];
+                    endif;
                     $hero_object -> text -> body = $post -> post_content;
                     $hero_object -> text -> heading = $post -> post_title;
                     $content[] = $hero_object ->return_array();
