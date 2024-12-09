@@ -33,9 +33,9 @@ class PostSaveHook{
 
     private static function init(): void {
         add_action( 'save_post', [self::$instance, 'hmb_post_save'], 10, 3 );
-        add_action('shutdown', [self::$instance, 'checkout']);
-        add_action('attachment_updated', [self::$instance, 'handle_attachment_updated'], 10, 3);
-        add_action('add_attachment', [self::$instance, 'handle_attachment_updated'], 10, 3);
+//        add_action('shutdown', [self::$instance, 'checkout']);
+//        add_action('attachment_updated', [self::$instance, 'handle_attachment_updated'], 10, 3);
+//        add_action('add_attachment', [self::$instance, 'handle_attachment_updated'], 10, 3);
         self::$endpoint = self::get_faust_frontend_uri() . '/api/revalidate';
     }
 
@@ -59,6 +59,7 @@ class PostSaveHook{
         foreach (self::$routes as $route):
             $response = self::sendRevalidationRequest($route);
         endforeach;
+        self::$routes = [];
     }
 
     public static function sendRevalidationRequest(string $path = '/') {
@@ -112,7 +113,10 @@ class PostSaveHook{
         return self::$instance;
     }
 
-    public static function hmb_post_save( $post_id, $post, $update ): void
+    /**
+     * @throws Exception
+     */
+    public static function hmb_post_save($post_id, $post, $update ): void
     {
         /** @var WP_Post $post */
 
@@ -129,14 +133,15 @@ class PostSaveHook{
             $relative_permalink = wp_make_link_relative( $permalink );
             self::$routes[] = $relative_permalink;
         else:
-            try{
-                foreach ( self::$lookups[ $post -> post_type] as $route ):
-                    self::$routes[] = $route;
-                endforeach;
-            } catch (Exception $e){
-                logger('something went wrong with the isr function ' . $post -> post_type);
-            }
+                try{
+                    foreach ( self::$lookups[ $post -> post_type] as $route ):
+                        self::$routes[] = $route;
+                    endforeach;
+                } catch (Exception $e){
+                    logger('something went wrong with the isr function ' . $post -> post_type);
+                }
         endif;
+        self::checkout();
     }
 }
 $instance = PostSaveHook::get_instance();
