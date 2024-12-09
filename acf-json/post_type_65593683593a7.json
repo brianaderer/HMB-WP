@@ -3,7 +3,7 @@
     "title": "Attractions",
     "menu_order": 0,
     "active": true,
-    "post_type": "post_attractions",
+    "post_type": "attractions",
     "advanced_configuration": true,
     "import_source": "",
     "import_date": "",
@@ -85,5 +85,5 @@
     "register_meta_box_cb": "",
     "enter_title_here": "",
     "show_in_graphql": 0,
-    "modified": 1733611376
+    "modified": 1733781832
 }

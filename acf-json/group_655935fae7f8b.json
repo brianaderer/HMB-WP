@@ -198,7 +198,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "post"
+                "value": "attractions"
             }
         ]
     ],
@@ -217,5 +217,5 @@
     "graphql_field_name": "attractionsCore",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1733762051
+    "modified": 1733782656
 }
