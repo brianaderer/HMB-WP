@@ -26,6 +26,9 @@ if( is_graphql_http_request() ):
 			$return_array = get_fields($post->ID);
 			$return_array['title'] = $post->post_title;
 			$return_array['id'] = $post->ID;
+			$photo_url = wp_get_attachment_image_src($return_array['photo'], 'medium_large');
+			$photo_url = $photo_url ? $photo_url[0] : "";
+			$return_array['photo'] = $photo_url;
 
 			// Check if 'location' exists
 			if (empty($return_array['location'])) {
@@ -41,7 +44,6 @@ if( is_graphql_http_request() ):
 				try{
 					$location = $return_array['location'];
 					$destination = $location['lat'] . ', ' . $location['lng'];
-					logger($destination);
 					$response = get_route_distance($destination);
 					$object = json_decode($response);
 					if( $object -> meta -> code  === 200 ):
