@@ -67,6 +67,11 @@ class PostSaveHook{
             'path' => $path,
         ];
 
+        logger($_ENV['REVALIDATION_KEY']);
+        logger($path);
+        logger(self::$endpoint);
+        logger($data);
+
         $ch = curl_init();
 
         // Set cURL options
@@ -80,7 +85,6 @@ class PostSaveHook{
 
         // Execute the request
         $response = curl_exec($ch);
-
         // Check for errors
         if (curl_errno($ch)) {
             $error = curl_error($ch);
