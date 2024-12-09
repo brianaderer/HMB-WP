@@ -1,10 +1,10 @@
-#name: Deploy to SpinUpWP
-#
-#on:
-#  push:
-#    branches:
-#      - staging  # Set this to your deployment branch, e.g., main or master
-#
+name: Deploy to SpinUpWP
+
+on:
+  push:
+    branches:
+      - main # Set this to your deployment branch, e.g., main or master
+
 #jobs:
 #  deploy:
 #    runs-on: ubuntu-latest
