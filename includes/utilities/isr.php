@@ -25,17 +25,20 @@ class PostSaveHook{
     {
     }
 
+    /**
+     * @throws Exception
+     */
     public static function handle_attachment_updated($post_id): void
     {
         // Ensure it's an attachment post type
         self::$routes[] = '/gallery';
+        self::checkout();
     }
 
     private static function init(): void {
         add_action( 'save_post', [self::$instance, 'hmb_post_save'], 10, 3 );
-//        add_action('shutdown', [self::$instance, 'checkout']);
-//        add_action('attachment_updated', [self::$instance, 'handle_attachment_updated'], 10, 3);
-//        add_action('add_attachment', [self::$instance, 'handle_attachment_updated'], 10, 3);
+        add_action('attachment_updated', [self::$instance, 'handle_attachment_updated'], 10, 3);
+        add_action('add_attachment', [self::$instance, 'handle_attachment_updated'], 10, 3);
         self::$endpoint = self::get_faust_frontend_uri() . '/api/revalidate';
     }
 
@@ -67,11 +70,6 @@ class PostSaveHook{
             'secret' => $_ENV['REVALIDATION_KEY'],
             'path' => $path,
         ];
-
-        logger($_ENV['REVALIDATION_KEY']);
-        logger($path);
-        logger(self::$endpoint);
-        logger($data);
 
         $ch = curl_init();
 
