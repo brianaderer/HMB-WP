@@ -68,7 +68,7 @@ add_action('graphql_register_types', function () {
                 'post_status' => 'publish',
                 'posts_per_page' => -1,
                 'order' => 'DESC',
-                'orderby' => 'date',
+                'orderby' => 'modified',
             );
             $query = new \WP_Query($args);
             if ($query->have_posts()):
