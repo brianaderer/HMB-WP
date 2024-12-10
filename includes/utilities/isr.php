@@ -16,7 +16,6 @@ class PostSaveHook{
         )
     );
     private static array $routes = array(
-        '/',
     );
     public static ?PostSaveHook $instance = null;
     private static string $endpoint;
@@ -32,6 +31,7 @@ class PostSaveHook{
     {
         // Ensure it's an attachment post type
         self::$routes[] = '/gallery';
+        self::$routes = '/';
         self::checkout();
     }
 
