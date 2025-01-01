@@ -55,7 +55,7 @@ add_action( 'graphql_register_types', function() {
         ],
 	];
 	// Define the 'GuestBookEntry' object type that corresponds to the ACF field group
-	register_graphql_object_type('GuestBookEntry', [
+	register_graphql_object_type('GuestBookEntryMutation', [
 		'description' => 'Represents a guest book entry with details about a boat',
 		'fields' => $boat_type_fields,
 	]);
@@ -69,7 +69,7 @@ add_action( 'graphql_register_types', function() {
 	/**
 	 * @throws Exception
 	 */
-	register_graphql_mutation('createGuestBookEntry', [
+	register_graphql_mutation('createGuestBookEntryMutation', [
 		'inputFields' => [
 			'title' => [
 				'type' => 'String',
@@ -90,7 +90,6 @@ add_action( 'graphql_register_types', function() {
 		'mutateAndGetPayload' => function($input, $context, $info) {
 			// Logic to create a comment and save guest book entry data
 			// Use $input['content'], $input['commentOn'], $input['guestBookEntry'], etc.
-
 			$args = array(
 				'post_type' => 'guest-book-entry',
 				'post_title' => $input['title'],

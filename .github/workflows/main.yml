@@ -3,7 +3,7 @@ name: Deploy to SpinUpWP
 on:
   push:
     branches:
-      - staging  # Set this to your deployment branch, e.g., main or master
+      - main  # Set this to your deployment branch, e.g., main or master
 
 jobs:
   deploy:
@@ -31,13 +31,14 @@ jobs:
           remote_host: 3.15.144.253
           remote_port: 22
           remote_user: admin
-          remote_key: ${{ secrets.SFTP_KEY }}
+          remote_key: ${{ secrets.MAIN_SSH_KEY }}
 
-      - name: Restart Application and Clear Cache
-        uses: appleboy/ssh-action@master
-        with:
-          host: 3.15.144.253
-          username: admin
-          key: ${{ secrets.SFTP_KEY }}
-          script: |
-            rm -rf /var/cache/nginx/*
+#      - name: Restart Application and Clear Cache
+#        uses: appleboy/ssh-action@master
+#        with:
+#          host: 3.15.144.253
+#          username: stagingadmin
+#          key: ${{ secrets.STAGING_SSH_KEY }}
+#          script: |
+#            rm -rf /var/cache/nginx/*
+#            repush

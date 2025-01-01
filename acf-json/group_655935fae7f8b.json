@@ -58,7 +58,7 @@
             "aria-label": "",
             "type": "taxonomy",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -177,8 +177,7 @@
                 "class": "",
                 "id": ""
             },
-            "show_in_graphql": 1,
-            "return_format": "url",
+            "return_format": "id",
             "library": "all",
             "min_width": "",
             "min_height": "",
@@ -187,7 +186,11 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium"
+            "allow_in_bindings": 1,
+            "preview_size": "medium",
+            "show_in_graphql": 1,
+            "graphql_description": "",
+            "graphql_field_name": "photo"
         }
     ],
     "location": [
@@ -214,5 +217,5 @@
     "graphql_field_name": "attractionsCore",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1706917465
+    "modified": 1733782656
 }
