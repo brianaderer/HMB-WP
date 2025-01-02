@@ -31,7 +31,7 @@ class PostSaveHook{
     {
         // Ensure it's an attachment post type
         self::$routes[] = '/gallery';
-        self::$routes = '/';
+        self::$routes[] = '/';
         self::checkout();
     }
 
