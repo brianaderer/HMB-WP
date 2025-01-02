@@ -97,7 +97,7 @@ class PostSaveHook{
 
         // Handle non-200 responses
         if ($httpCode !== 200) {
-            throw new Exception("HTTP Error: $httpCode, Response: $response");
+//            throw new Exception("HTTP Error: $httpCode, Response: $response");
         }
 
         return json_decode($response, true);
